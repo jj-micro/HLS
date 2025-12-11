@@ -1,0 +1,78 @@
+ECHO est  desactivado.
+ECHO est  desactivado.
+NOTE: Using modified tcl85t.dll from https://gitenterprise.xilinx.com/ACT/vitis_hls_tcl
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'javie' on host 'jav-port0' (Windows NT_amd64 version 6.2) on Thu Dec 11 17:23:42 +0100 2025
+INFO: [HLS 200-10] In directory 'C:/Users/javie/Desktop/HLS/HLS'
+Sourcing Tcl script 'C:/Users/javie/Desktop/HLS/HLS/TRABAJOHLS/solution1/csim.tcl'
+INFO: [HLS 200-1510] Running: source C:/Users/javie/Desktop/HLS/HLS/TRABAJOHLS/solution1/csim.tcl
+INFO: [HLS 200-1510] Running: open_project TRABAJOHLS 
+INFO: [HLS 200-10] Opening project 'C:/Users/javie/Desktop/HLS/HLS/TRABAJOHLS'.
+INFO: [HLS 200-1510] Running: set_top matrixcalc 
+INFO: [HLS 200-1510] Running: add_files matrixcalc.cpp 
+INFO: [HLS 200-10] Adding design file 'matrixcalc.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb matrixcalc_test.cpp 
+INFO: [HLS 200-10] Adding test bench file 'matrixcalc_test.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'C:/Users/javie/Desktop/HLS/HLS/TRABAJOHLS/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2023.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 8 -name default 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../matrixcalc_test.cpp in debug mode
+   Generating csim.exe
+In file included from C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:149:0,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_private.h:52,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_common.h:666,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_int.h:10,
+                 from ../../../../matrixcalc.h:1,
+                 from ../../../../matrixcalc_test.cpp:8:
+C:/Xilinx/Vitis_HLS/2023.1/include/gmp.h:58:0: warning: "__GMP_LIBGMP_DLL" redefined
+ #define __GMP_LIBGMP_DLL  0
+ 
+In file included from C:/Xilinx/Vitis_HLS/2023.1/include/hls_fpo.h:143:0,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/hls_half_fpo.h:18,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/hls_half.h:25,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_private.h:52,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/etc/ap_common.h:666,
+                 from C:/Xilinx/Vitis_HLS/2023.1/include/ap_int.h:10,
+                 from ../../../../matrixcalc.h:1,
+                 from ../../../../matrixcalc_test.cpp:8:
+C:/Xilinx/Vitis_HLS/2023.1/include/floating_point_v7_1_bitacc_cmodel.h:141:0: note: this is the location of the previous definition
+ #define __GMP_LIBGMP_DLL 1
+ 
+============================================
+    TESTBENCH MATRIXCALC - HLS            
+============================================
+Progreso: 10000 tests, 10000 OK, 0 FAIL
+Progreso: 20000 tests, 20000 OK, 0 FAIL
+Progreso: 30000 tests, 30000 OK, 0 FAIL
+Progreso: 40000 tests, 40000 OK, 0 FAIL
+Progreso: 50000 tests, 50000 OK, 0 FAIL
+Progreso: 60000 tests, 60000 OK, 0 FAIL
+Progreso: 70000 tests, 70000 OK, 0 FAIL
+Progreso: 80000 tests, 80000 OK, 0 FAIL
+Progreso: 90000 tests, 90000 OK, 0 FAIL
+Progreso: 100000 tests, 100000 OK, 0 FAIL
+
+============================================
+              RESUMEN                       
+============================================
+Total de tests:  100000
+Tests exitosos:  100000 (100.00%)
+Tests fallidos:  0 (0.00%)
+============================================
+RESULTADO: TODOS LOS TESTS PASARON!
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 5.609 seconds; current allocated memory: 0.641 MB.
+INFO: [HLS 200-112] Total CPU user time: 2 seconds. Total CPU system time: 1 seconds. Total elapsed time: 8.9 seconds; peak allocated memory: 107.812 MB.

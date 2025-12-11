@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="matrixcalc.cpp" path="C:\Users\javie\Desktop\HLS\HLS\matrixcalc.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="matrixcalc_test.cpp" path="C:\Users\javie\Desktop\HLS\HLS\matrixcalc_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

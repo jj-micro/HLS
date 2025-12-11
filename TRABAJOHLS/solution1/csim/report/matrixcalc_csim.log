@@ -1,0 +1,28 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../matrixcalc_test.cpp in debug mode
+   Generating csim.exe
+============================================
+    TESTBENCH MATRIXCALC - HLS            
+============================================
+Progreso: 10000 tests, 10000 OK, 0 FAIL
+Progreso: 20000 tests, 20000 OK, 0 FAIL
+Progreso: 30000 tests, 30000 OK, 0 FAIL
+Progreso: 40000 tests, 40000 OK, 0 FAIL
+Progreso: 50000 tests, 50000 OK, 0 FAIL
+Progreso: 60000 tests, 60000 OK, 0 FAIL
+Progreso: 70000 tests, 70000 OK, 0 FAIL
+Progreso: 80000 tests, 80000 OK, 0 FAIL
+Progreso: 90000 tests, 90000 OK, 0 FAIL
+Progreso: 100000 tests, 100000 OK, 0 FAIL
+
+============================================
+              RESUMEN                       
+============================================
+Total de tests:  100000
+Tests exitosos:  100000 (100.00%)
+Tests fallidos:  0 (0.00%)
+============================================
+RESULTADO: TODOS LOS TESTS PASARON!
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************
