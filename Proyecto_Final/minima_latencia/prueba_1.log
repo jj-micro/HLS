@@ -1,0 +1,542 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 8 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.066 seconds; current allocated memory: 0.563 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 8 -name default 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.973 seconds; current allocated memory: 0.406 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 8 -name default 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.756 seconds; current allocated memory: 0.379 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 8 -name default 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+ERROR: [SIM 211-100] CSim failed with errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.945 seconds; current allocated memory: 0.613 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 8 -name default 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+ERROR: [SIM 211-100] CSim failed with errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.386 seconds; current allocated memory: 0.332 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 8 -name default 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+ERROR: [SIM 211-100] CSim failed with errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.358 seconds; current allocated memory: 0.344 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 8 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.392 seconds; current allocated memory: 1.289 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 8 -name default 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.77 seconds; current allocated memory: 0.324 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 8 -name default 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 5.915 seconds; current allocated memory: 0.438 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 8 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.125 seconds; current allocated memory: 133.348 MB.
+INFO: [HLS 200-10] Analyzing design file 'matrixcalc.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 5.692 seconds; current allocated memory: 134.938 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-178] Inlining function 'matrixmul(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])' into 'matrixcalc(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])' (matrixcalc.cpp:65:0)
+INFO: [HLS 214-178] Inlining function 'matrixsum(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])' into 'matrixcalc(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])' (matrixcalc.cpp:65:0)
+INFO: [HLS 214-178] Inlining function 'det(ap_int<4> (*) [3])' into 'matrixcalc(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])' (matrixcalc.cpp:65:0)
+INFO: [HLS 214-241] Aggregating bram variable 'c' with compact=bit mode in 4-bits (matrixcalc.cpp:65:0)
+INFO: [HLS 214-241] Aggregating bram variable 'b' with compact=bit mode in 4-bits (matrixcalc.cpp:65:0)
+INFO: [HLS 214-241] Aggregating bram variable 'a' with compact=bit mode in 4-bits (matrixcalc.cpp:65:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 4.702 seconds; current allocated memory: 135.875 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 135.875 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.206 seconds; current allocated memory: 141.707 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 143.301 MB.
+INFO: [XFORM 203-510] Pipelining loop 'Col' (matrixcalc.cpp:37) in function 'matrixcalc' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Col' (matrixcalc.cpp:55) in function 'matrixcalc' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Calc' (matrixcalc.cpp:14) in function 'matrixcalc' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Col' (matrixcalc.cpp:37) in function 'matrixcalc' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Product' (matrixcalc.cpp:40) in function 'matrixcalc' completely with a factor of 3.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.118 seconds; current allocated memory: 164.566 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'Row' (matrixcalc.cpp:35:8) in function 'matrixcalc'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Row' (matrixcalc.cpp:53:8) in function 'matrixcalc'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Init' (matrixcalc.cpp:10:7) in function 'matrixcalc'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.126 seconds; current allocated memory: 184.719 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matrixcalc' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrixcalc_Pipeline_Row_Col' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Row_Col'.
+WARNING: [HLS 200-885] The II Violation in module 'matrixcalc_Pipeline_Row_Col' (loop 'Row_Col'): Unable to schedule 'load' operation ('a_load_1', matrixcalc.cpp:35->matrixcalc.cpp:67) on array 'a' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'a'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 5, loop 'Row_Col'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.498 seconds; current allocated memory: 189.820 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.165 seconds; current allocated memory: 191.117 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrixcalc_Pipeline_Row_Col1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Row_Col'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 4, loop 'Row_Col'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.16 seconds; current allocated memory: 191.473 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.094 seconds; current allocated memory: 191.555 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrixcalc_Pipeline_Init_Calc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Init_Calc'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 5, loop 'Init_Calc'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.231 seconds; current allocated memory: 192.469 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.111 seconds; current allocated memory: 192.516 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrixcalc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.115 seconds; current allocated memory: 192.707 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.137 seconds; current allocated memory: 192.848 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrixcalc_Pipeline_Row_Col' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'matrixcalc_Pipeline_Row_Col' pipeline 'Row_Col' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_4s_4s_4_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrixcalc_Pipeline_Row_Col'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.164 seconds; current allocated memory: 195.309 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrixcalc_Pipeline_Row_Col1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'matrixcalc_Pipeline_Row_Col1' pipeline 'Row_Col' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrixcalc_Pipeline_Row_Col1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.262 seconds; current allocated memory: 197.609 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrixcalc_Pipeline_Init_Calc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'matrixcalc_Pipeline_Init_Calc' pipeline 'Init_Calc' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_4s_4s_4_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrixcalc_Pipeline_Init_Calc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.177 seconds; current allocated memory: 199.047 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrixcalc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matrixcalc' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrixcalc'.
+INFO: [RTMG 210-278] Implementing memory 'matrixcalc_aux_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'matrixcalc_aux2_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.345 seconds; current allocated memory: 201.008 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.514 seconds; current allocated memory: 205.020 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 0.6 seconds; current allocated memory: 210.145 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for matrixcalc.
+INFO: [VLOG 209-307] Generating Verilog RTL for matrixcalc.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 175.10 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 3 seconds. CPU system time: 1 seconds. Elapsed time: 14.63 seconds; current allocated memory: 77.211 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 8 -name default 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.581 seconds; current allocated memory: 0.414 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 8 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.128 seconds; current allocated memory: 107.520 MB.
+INFO: [HLS 200-10] Analyzing design file 'matrixcalc.cpp' ... 
+ERROR: [HLS 207-3776] use of undeclared identifier 'aux' (matrixcalc.cpp:72:38)
+WARNING: [HLS 207-5548] invalid variable expr  (matrixcalc.cpp:72:38)
+ERROR: [HLS 207-3776] use of undeclared identifier 'aux2' (matrixcalc.cpp:73:38)
+WARNING: [HLS 207-5548] invalid variable expr  (matrixcalc.cpp:73:38)
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.69 seconds; current allocated memory: 0.598 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 8 -name default 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.665 seconds; current allocated memory: 0.465 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 8 -name default 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.064 seconds; current allocated memory: 0.465 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 8 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.124 seconds; current allocated memory: 108.391 MB.
+INFO: [HLS 200-10] Analyzing design file 'matrixcalc.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 5.243 seconds; current allocated memory: 109.586 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-131] Inlining function 'matrixmul(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])' into 'matrixcalc(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])' (matrixcalc.cpp:86:2)
+INFO: [HLS 214-131] Inlining function 'det(ap_int<4> (*) [3])' into 'matrixcalc(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])' (matrixcalc.cpp:88:16)
+INFO: [HLS 214-131] Inlining function 'matrixsum(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])' into 'matrixcalc(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])' (matrixcalc.cpp:87:2)
+INFO: [HLS 214-291] Loop 'Init' is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:11:7)
+INFO: [HLS 214-291] Loop 'Calc' is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:15:7)
+INFO: [HLS 214-291] Loop 'Row' is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:56:7)
+INFO: [HLS 214-291] Loop 'Col' is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:58:10)
+INFO: [HLS 214-291] Loop 'Row' is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:37:7)
+INFO: [HLS 214-291] Loop 'Col' is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:39:10)
+INFO: [HLS 214-291] Loop 'Product' is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:42:16)
+INFO: [HLS 214-186] Unrolling loop 'Init' (matrixcalc.cpp:11:7) in function 'matrixcalc' completely with a factor of 3 (matrixcalc.cpp:68:0)
+INFO: [HLS 214-186] Unrolling loop 'Calc' (matrixcalc.cpp:15:7) in function 'matrixcalc' completely with a factor of 3 (matrixcalc.cpp:68:0)
+INFO: [HLS 214-186] Unrolling loop 'Row' (matrixcalc.cpp:56:7) in function 'matrixcalc' completely with a factor of 3 (matrixcalc.cpp:68:0)
+INFO: [HLS 214-186] Unrolling loop 'Col' (matrixcalc.cpp:58:10) in function 'matrixcalc' completely with a factor of 3 (matrixcalc.cpp:68:0)
+INFO: [HLS 214-186] Unrolling loop 'Row' (matrixcalc.cpp:37:7) in function 'matrixcalc' completely with a factor of 3 (matrixcalc.cpp:68:0)
+INFO: [HLS 214-186] Unrolling loop 'Col' (matrixcalc.cpp:39:10) in function 'matrixcalc' completely with a factor of 3 (matrixcalc.cpp:68:0)
+INFO: [HLS 214-186] Unrolling loop 'Product' (matrixcalc.cpp:42:16) in function 'matrixcalc' completely with a factor of 3 (matrixcalc.cpp:68:0)
+INFO: [HLS 214-248] Applying array_partition to 'a': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (matrixcalc.cpp:68:0)
+INFO: [HLS 214-248] Applying array_partition to 'b': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (matrixcalc.cpp:68:0)
+INFO: [HLS 214-248] Applying array_partition to 'c': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_2_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_2_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_2_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_1_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_1_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_1_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_0_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_0_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_0_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_2_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_2_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_2_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_1_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_1_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_1_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_0_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_0_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_0_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_2_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_2_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_2_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_1_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_1_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_1_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_0_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_0_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_0_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 5.082 seconds; current allocated memory: 111.234 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 111.234 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.186 seconds; current allocated memory: 115.844 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.151 seconds; current allocated memory: 117.055 MB.
+INFO: [XFORM 203-11] Balancing expressions in function 'matrixcalc' (matrixcalc.cpp:20:2)...27 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.115 seconds; current allocated memory: 137.945 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.094 seconds; current allocated memory: 137.961 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matrixcalc' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrixcalc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'matrixcalc'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, function 'matrixcalc'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.744 seconds; current allocated memory: 137.961 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 137.992 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrixcalc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_0_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_0_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_0_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_1_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_1_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_1_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_2_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_2_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_2_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_0_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_0_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_0_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_1_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_1_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_1_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_2_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_2_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_2_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_0_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_0_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_0_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_1_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_1_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_1_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_2_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_2_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_2_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matrixcalc' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'matrixcalc' pipeline 'matrixcalc' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_4s_4s_4_1_1': 37 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrixcalc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.262 seconds; current allocated memory: 140.871 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.721 seconds; current allocated memory: 147.648 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.771 seconds; current allocated memory: 152.262 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for matrixcalc.
+INFO: [VLOG 209-307] Generating Verilog RTL for matrixcalc.
+INFO: [HLS 200-789] **** Estimated Fmax: 172.12 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 13.692 seconds; current allocated memory: 44.098 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1464] Running solution command: config_cosim -trace_level=all
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 8 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-1510] Running: config_cosim -tool xsim -trace_level all 
+INFO: [HLS 200-1510] Running: cosim_design -trace_level all 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 265.354 seconds; current allocated memory: 10.566 MB.

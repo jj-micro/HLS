@@ -1,0 +1,7 @@
+Running: xsim.dir/matrixcalc/xsimk.exe -simmode gui -wdb matrixcalc.wdb -simrunnum 0 -socket 50666
+Design successfully loaded
+Design Loading Memory Usage: 12780 KB (Peak: 12780 KB)
+Design Loading CPU Usage: 62 ms
+Simulation completed
+Simulation Memory Usage: 26432 KB (Peak: 26432 KB)
+Simulation CPU Usage: 42764 ms
