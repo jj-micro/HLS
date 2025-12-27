@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="matrixcalc.cpp" path="C:\Users\aulavirtual\Desktop\Trabajo_Final\matrixcalc.cpp"/>
+    <originFiles name="matrixcalc.h" path="C:\Users\aulavirtual\Desktop\Trabajo_Final\matrixcalc.h"/>
+  </source>
+  <testbench>
+    <originFiles name="matrixcalc_test.cpp" path="C:\Users\aulavirtual\Desktop\Trabajo_Final\matrixcalc_test.cpp"/>
+    <originFiles name="inputs.txt" path="C:\Users\aulavirtual\Desktop\Trabajo_Final\inputs.txt"/>
+    <originFiles name="outputs.golden.txt" path="C:\Users\aulavirtual\Desktop\Trabajo_Final\outputs.golden.txt"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

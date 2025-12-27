@@ -1,0 +1,952 @@
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: matrixcalc.cpp, Line: 86, Column: 2 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'matrixmul(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])'
+    DebugLoc:        { File: matrixcalc.cpp, Line: 34, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'matrixcalc(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])'
+    DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: matrixcalc.cpp, Line: 88, Column: 16 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'det(ap_int<4> (*) [3])'
+    DebugLoc:        { File: matrixcalc.cpp, Line: 4, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'matrixcalc(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])'
+    DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: matrixcalc.cpp, Line: 87, Column: 2 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'matrixsum(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])'
+    DebugLoc:        { File: matrixcalc.cpp, Line: 53, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'matrixcalc(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])'
+    DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: matrixcalc.cpp, Line: 11, Column: 7 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        Init
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: matrixcalc.cpp, Line: 15, Column: 7 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        Calc
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: matrixcalc.cpp, Line: 56, Column: 7 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        Row
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: matrixcalc.cpp, Line: 58, Column: 10 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        Col
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: matrixcalc.cpp, Line: 37, Column: 7 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        Row
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: matrixcalc.cpp, Line: 39, Column: 10 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        Col
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: matrixcalc.cpp, Line: 42, Column: 16 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        Product
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Init
+  - String:          ''' ('
+  - LoopLoc:         'matrixcalc.cpp:11:7'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matrixcalc
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Calc
+  - String:          ''' ('
+  - LoopLoc:         'matrixcalc.cpp:15:7'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matrixcalc
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Calc
+  - String:          ''' ('
+  - LoopLoc:         'matrixcalc.cpp:15:7'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matrixcalc
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Calc
+  - String:          ''' ('
+  - LoopLoc:         'matrixcalc.cpp:15:7'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matrixcalc
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Row
+  - String:          ''' ('
+  - LoopLoc:         'matrixcalc.cpp:56:7'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matrixcalc
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Col
+  - String:          ''' ('
+  - LoopLoc:         'matrixcalc.cpp:58:10'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matrixcalc
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Col
+  - String:          ''' ('
+  - LoopLoc:         'matrixcalc.cpp:58:10'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matrixcalc
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Col
+  - String:          ''' ('
+  - LoopLoc:         'matrixcalc.cpp:58:10'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matrixcalc
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Row
+  - String:          ''' ('
+  - LoopLoc:         'matrixcalc.cpp:37:7'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matrixcalc
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Col
+  - String:          ''' ('
+  - LoopLoc:         'matrixcalc.cpp:39:10'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matrixcalc
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Product
+  - String:          ''' ('
+  - LoopLoc:         'matrixcalc.cpp:42:16'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matrixcalc
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Product
+  - String:          ''' ('
+  - LoopLoc:         'matrixcalc.cpp:42:16'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matrixcalc
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Product
+  - String:          ''' ('
+  - LoopLoc:         'matrixcalc.cpp:42:16'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matrixcalc
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Col
+  - String:          ''' ('
+  - LoopLoc:         'matrixcalc.cpp:39:10'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matrixcalc
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Product
+  - String:          ''' ('
+  - LoopLoc:         'matrixcalc.cpp:42:16'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matrixcalc
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Product
+  - String:          ''' ('
+  - LoopLoc:         'matrixcalc.cpp:42:16'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matrixcalc
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Product
+  - String:          ''' ('
+  - LoopLoc:         'matrixcalc.cpp:42:16'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matrixcalc
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Col
+  - String:          ''' ('
+  - LoopLoc:         'matrixcalc.cpp:39:10'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matrixcalc
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Product
+  - String:          ''' ('
+  - LoopLoc:         'matrixcalc.cpp:42:16'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matrixcalc
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Product
+  - String:          ''' ('
+  - LoopLoc:         'matrixcalc.cpp:42:16'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matrixcalc
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        Product
+  - String:          ''' ('
+  - LoopLoc:         'matrixcalc.cpp:42:16'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          matrixcalc
+  - String:          ''' completely with a factor of '
+  - Factor:          '3'
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          a
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          b
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          c
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '2'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            c_2_2
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '4'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            c_2_1
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '4'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            c_2_0
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '4'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            c_1_2
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '4'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            c_1_1
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '4'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            c_1_0
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '4'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            c_0_2
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '4'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            c_0_1
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '4'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            c_0_0
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '4'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            b_2_2
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '4'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            b_2_1
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '4'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            b_2_0
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '4'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            b_1_2
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '4'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            b_1_1
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '4'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            b_1_0
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '4'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            b_0_2
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '4'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            b_0_1
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '4'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            b_0_0
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '4'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            a_2_2
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '4'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            a_2_1
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '4'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            a_2_0
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '4'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            a_1_2
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '4'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            a_1_1
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '4'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            a_1_0
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '4'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            a_0_2
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '4'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            a_0_1
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '4'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        scalar
+  - String:          ' variable '''
+  - Name:            a_0_0
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '4'
+  - String:          '-bits'
+...
