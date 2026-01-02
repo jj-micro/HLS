@@ -1,0 +1,18 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../matrixcalc_test.cpp in debug mode
+   Compiling ../../../../matrixcalc.cpp in debug mode
+   Generating csim.exe
+Iteracion 0 completada con exito.
+Iteracion 10000 completada con exito.
+Iteracion 20000 completada con exito.
+Iteracion 30000 completada con exito.
+Iteracion 40000 completada con exito.
+Iteracion 50000 completada con exito.
+Iteracion 60000 completada con exito.
+Iteracion 70000 completada con exito.
+Iteracion 80000 completada con exito.
+Iteracion 90000 completada con exito.
+Todos los tests han pasado con exito.
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

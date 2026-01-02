@@ -66,7 +66,7 @@ int matrixcalc(
 	      mat b[MATRIX_LEN][MATRIX_LEN],
 		  mat c[MATRIX_LEN][MATRIX_LEN])
 {
-	#pragma HLS INTERFACE ap_ctrl_hs port=return
+
 
 	// Entradas particionadas
 	#pragma HLS ARRAY_PARTITION variable=a complete dim=0
@@ -77,8 +77,8 @@ int matrixcalc(
 	mat aux[MATRIX_LEN][MATRIX_LEN], aux2[MATRIX_LEN][MATRIX_LEN];
 
 	// Particionado de locales (esto permite acceso paralelo total)
-	#pragma HLS ARRAY_PARTITION variable=aux complete dim=0
-	#pragma HLS ARRAY_PARTITION variable=aux2 complete dim=0
+
+
 
 	// Pipeline en el top para forzar el desenrollado de TODO lo de abajo
 	#pragma HLS PIPELINE II=1

@@ -1,0 +1,76 @@
+
+Nombre de host:                            JJ-PC
+Nombre del sistema operativo:              Microsoft Windows 11 Pro
+Versi¢n del sistema operativo:             10.0.26200 N/D Compilaci¢n 26200
+Fabricante del sistema operativo:          Microsoft Corporation
+Configuraci¢n del sistema operativo:       Estaci¢n de trabajo independiente
+Tipo de compilaci¢n del sistema operativo: Multiprocessor Free
+Propietario registrado:                    javier.lledo.morante@hotmail.com
+Organizaci¢n registrada:                   N/D
+Id. del producto:                          00330-80000-00000-AA377
+Fecha de instalaci¢n original:             01/11/2025, 19:12:24
+Tiempo de arranque del sistema:            02/01/2026, 11:53:12
+Fabricante del sistema:                    Micro-Star International Co., Ltd.
+Modelo del sistema:                        MS-7D45
+Tipo de sistema:                           x64-based PC
+Procesadores:                              1 Procesadores instalados.
+                                           [01]: Intel64 Family 6 Model 151 Stepping 5 GenuineIntel ~3300 Mhz
+Versi¢n del BIOS:                          American Megatrends International, LLC. 1.B0, 10/01/2023
+Directorio de Windows:                     C:\WINDOWS
+Directorio de sistema:                     C:\WINDOWS\system32
+Dispositivo de arranque:                   \Device\HarddiskVolume4
+Configuraci¢n regional del sistema:        es;Espa¤ol (internacional)
+Idioma de entrada:                         es;Espa¤ol (tradicional)
+Zona horaria:                              (UTC+01:00) Bruselas, Copenhague, Madrid, Par¡s
+Memoria f¡sica total:                      16.166 MB
+Memoria f¡sica disponible:                 6.958 MB
+Memoria virtual: tama¤o m ximo:            30.502 MB
+Memoria virtual: disponible:               12.276 MB
+Memoria virtual: en uso:                   18.226 MB
+Ubicaciones de archivos de p gina:         C:\pagefile.sys
+Dominio:                                   WORKGROUP
+Servidor de inicio de sesi¢n:              \\JJ-PC
+Revisiones:                                5 revisi¢n(es) instaladas.
+                                           [01]: KB5066128
+                                           [02]: KB5054156
+                                           [03]: KB5070349
+                                           [04]: KB5072033
+                                           [05]: KB5071142
+Tarjetas de red:                           4 Tarjetas de interfaz de red instaladas.
+                                           [01]: Realtek Gaming 2.5GbE Family Controller
+                                                 Nombre de conexi¢n: Ethernet
+                                                 DHCP habilitado:    S¡
+                                                 Servidor DHCP:      192.168.1.1
+                                                 Direcciones IP
+                                                 [01]: 192.168.1.232
+                                           [02]: WireGuard Tunnel
+                                                 Nombre de conexi¢n: NordLynx
+                                                 DHCP habilitado:    No
+                                                 Direcciones IP
+                                                 [01]: 10.5.0.2
+                                                 [02]: fe80::6c14:7860:4dd9:4bc8
+                                           [03]: TAP-NordVPN Windows Adapter V9
+                                                 Nombre de conexi¢n: Conexi¢n de  rea local 2
+                                                 Estado:             Medios desconectados
+                                           [04]: OpenVPN Data Channel Offload
+                                                 Nombre de conexi¢n: OpenVPN Data Channel Offload for NordVPN
+                                                 Estado:             Medios desconectados
+Seguridad basada en virtualizaci¢n:        Estado:ÿEn ejecuci¢n
+                                           Propiedades de seguridad requeridas:
+                                                 Compatibilidad con la virtualizaci¢n base
+                                           Propiedades de seguridad disponibles:
+                                                 Compatibilidad con la virtualizaci¢n base
+                                                 Protecci¢n de DMA
+                                                 C¢digo UEFI de solo lectura
+                                                 SMM Security Mitigations 1.0
+                                                 Control de ejecuci¢n basado en el modo
+                                                 Virtualizaci¢n de APIC
+                                           Services Configured:
+                                                 Integridad del c¢digo reforzada por el hipervisor
+                                           Services Running:
+                                                 Integridad del c¢digo reforzada por el hipervisor
+                                                 Traducci¢n de paginaci¢n aplicada por hipervisor
+                                           App Control for Business policy: Forzado
+                                           App Control for Business user mode policy: Desactivado
+                                           Caracter¡sticas de seguridad habilitadas:
+Requisitos Hyper-V:                        Se detect¢ un hipervisor. No se mostrar n las caracter¡sticas necesarias para Hyper-V.

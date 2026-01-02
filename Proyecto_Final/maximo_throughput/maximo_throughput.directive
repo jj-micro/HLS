@@ -1,0 +1,31 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="det" label="Init" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="det" label="Calc" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="matrixmul" label="Row" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="matrixmul" label="Col" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="matrixmul" label="Product" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="matrixsum" label="Row" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="matrixsum" label="Col" functionLabel="">
+            <pragma name="UNROLL"/>
+        </directive>
+        <directive functionName="matrixcalc" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="matrixcalc"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

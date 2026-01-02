@@ -1,0 +1,192 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matrixcalc.cpp:5:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="det" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/javie/Desktop/HLS/Proyecto_Final/maximo_throughput/directives.tcl:7:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="det" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/javie/Desktop/HLS/Proyecto_Final/maximo_throughput/directives.tcl:8:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="det" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matrixcalc.cpp:35:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matrixmul" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/javie/Desktop/HLS/Proyecto_Final/maximo_throughput/directives.tcl:9:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="matrixmul" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/javie/Desktop/HLS/Proyecto_Final/maximo_throughput/directives.tcl:10:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="matrixmul" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/javie/Desktop/HLS/Proyecto_Final/maximo_throughput/directives.tcl:11:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="matrixmul" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matrixcalc.cpp:54:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matrixsum" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/javie/Desktop/HLS/Proyecto_Final/maximo_throughput/directives.tcl:12:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="matrixsum" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/javie/Desktop/HLS/Proyecto_Final/maximo_throughput/directives.tcl:13:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="matrixsum" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/javie/Desktop/HLS/Proyecto_Final/maximo_throughput/directives.tcl:14:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="matrixcalc" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=matrixcalc" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/javie/Desktop/HLS/Proyecto_Final/maximo_throughput/csynth.tcl:20:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="matrixcalc" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=matrixcalc" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matrixcalc.cpp:72:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matrixcalc" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=a complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matrixcalc.cpp:73:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matrixcalc" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=b complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matrixcalc.cpp:74:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matrixcalc" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=c complete dim=0" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matrixcalc.cpp:84:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="matrixcalc" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="matrixcalc.cpp:86:2" msg_body="Inlining function 'matrixmul(ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3])' into 'matrixcalc(ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3])'">
+        <args Callee="matrixmul(ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3])" Callee-DebugLoc="File matrixcalc.cpp Line 34 Column 0" Caller="matrixcalc(ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3])" Caller-DebugLoc="File matrixcalc.cpp Line 68 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="matrixcalc.cpp:88:16" msg_body="Inlining function 'det(ap_int&lt;4&gt; (*) [3])' into 'matrixcalc(ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3])'">
+        <args Callee="det(ap_int&lt;4&gt; (*) [3])" Callee-DebugLoc="File matrixcalc.cpp Line 4 Column 0" Caller="matrixcalc(ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3])" Caller-DebugLoc="File matrixcalc.cpp Line 68 Column 0"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-131" msg_severity="INFO" msg_loc="matrixcalc.cpp:87:2" msg_body="Inlining function 'matrixsum(ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3])' into 'matrixcalc(ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3])'">
+        <args Callee="matrixsum(ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3])" Callee-DebugLoc="File matrixcalc.cpp Line 53 Column 0" Caller="matrixcalc(ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3])" Caller-DebugLoc="File matrixcalc.cpp Line 68 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="matrixcalc.cpp:11:7" msg_body="Loop 'Init' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="Init"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="matrixcalc.cpp:15:7" msg_body="Loop 'Calc' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="Calc"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="matrixcalc.cpp:56:7" msg_body="Loop 'Row' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="Row"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="matrixcalc.cpp:58:10" msg_body="Loop 'Col' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="Col"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="matrixcalc.cpp:37:7" msg_body="Loop 'Row' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="Row"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="matrixcalc.cpp:39:10" msg_body="Loop 'Col' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="Col"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="matrixcalc.cpp:42:16" msg_body="Loop 'Product' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="Product"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Unrolling loop 'Init' (matrixcalc.cpp:11:7) in function 'matrixcalc' completely with a factor of 3">
+        <args Factor="3" LoopLoc="matrixcalc.cpp:11:7" LoopName="Init"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Unrolling loop 'Calc' (matrixcalc.cpp:15:7) in function 'matrixcalc' completely with a factor of 3">
+        <args Factor="3" LoopLoc="matrixcalc.cpp:15:7" LoopName="Calc"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Unrolling loop 'Row' (matrixcalc.cpp:56:7) in function 'matrixcalc' completely with a factor of 3">
+        <args Factor="3" LoopLoc="matrixcalc.cpp:56:7" LoopName="Row"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Unrolling loop 'Col' (matrixcalc.cpp:58:10) in function 'matrixcalc' completely with a factor of 3">
+        <args Factor="3" LoopLoc="matrixcalc.cpp:58:10" LoopName="Col"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Unrolling loop 'Row' (matrixcalc.cpp:37:7) in function 'matrixcalc' completely with a factor of 3">
+        <args Factor="3" LoopLoc="matrixcalc.cpp:37:7" LoopName="Row"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Unrolling loop 'Col' (matrixcalc.cpp:39:10) in function 'matrixcalc' completely with a factor of 3">
+        <args Factor="3" LoopLoc="matrixcalc.cpp:39:10" LoopName="Col"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Unrolling loop 'Product' (matrixcalc.cpp:42:16) in function 'matrixcalc' completely with a factor of 3">
+        <args Factor="3" LoopLoc="matrixcalc.cpp:42:16" LoopName="Product"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Applying array_partition to 'a': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="a"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Applying array_partition to 'b': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="b"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Applying array_partition to 'c': Complete partitioning on dimension 1. Complete partitioning on dimension 2.">
+        <args Dim="islist 1 2" Mode="islist Complete Complete" UOName="c"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Aggregating scalar variable 'c_2_2' with compact=bit mode in 4-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="4" HwTyName="scalar" Name="c_2_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Aggregating scalar variable 'c_2_1' with compact=bit mode in 4-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="4" HwTyName="scalar" Name="c_2_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Aggregating scalar variable 'c_2_0' with compact=bit mode in 4-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="4" HwTyName="scalar" Name="c_2_0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Aggregating scalar variable 'c_1_2' with compact=bit mode in 4-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="4" HwTyName="scalar" Name="c_1_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Aggregating scalar variable 'c_1_1' with compact=bit mode in 4-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="4" HwTyName="scalar" Name="c_1_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Aggregating scalar variable 'c_1_0' with compact=bit mode in 4-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="4" HwTyName="scalar" Name="c_1_0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Aggregating scalar variable 'c_0_2' with compact=bit mode in 4-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="4" HwTyName="scalar" Name="c_0_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Aggregating scalar variable 'c_0_1' with compact=bit mode in 4-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="4" HwTyName="scalar" Name="c_0_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Aggregating scalar variable 'c_0_0' with compact=bit mode in 4-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="4" HwTyName="scalar" Name="c_0_0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Aggregating scalar variable 'b_2_2' with compact=bit mode in 4-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="4" HwTyName="scalar" Name="b_2_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Aggregating scalar variable 'b_2_1' with compact=bit mode in 4-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="4" HwTyName="scalar" Name="b_2_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Aggregating scalar variable 'b_2_0' with compact=bit mode in 4-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="4" HwTyName="scalar" Name="b_2_0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Aggregating scalar variable 'b_1_2' with compact=bit mode in 4-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="4" HwTyName="scalar" Name="b_1_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Aggregating scalar variable 'b_1_1' with compact=bit mode in 4-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="4" HwTyName="scalar" Name="b_1_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Aggregating scalar variable 'b_1_0' with compact=bit mode in 4-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="4" HwTyName="scalar" Name="b_1_0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Aggregating scalar variable 'b_0_2' with compact=bit mode in 4-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="4" HwTyName="scalar" Name="b_0_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Aggregating scalar variable 'b_0_1' with compact=bit mode in 4-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="4" HwTyName="scalar" Name="b_0_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Aggregating scalar variable 'b_0_0' with compact=bit mode in 4-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="4" HwTyName="scalar" Name="b_0_0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Aggregating scalar variable 'a_2_2' with compact=bit mode in 4-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="4" HwTyName="scalar" Name="a_2_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Aggregating scalar variable 'a_2_1' with compact=bit mode in 4-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="4" HwTyName="scalar" Name="a_2_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Aggregating scalar variable 'a_2_0' with compact=bit mode in 4-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="4" HwTyName="scalar" Name="a_2_0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Aggregating scalar variable 'a_1_2' with compact=bit mode in 4-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="4" HwTyName="scalar" Name="a_1_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Aggregating scalar variable 'a_1_1' with compact=bit mode in 4-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="4" HwTyName="scalar" Name="a_1_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Aggregating scalar variable 'a_1_0' with compact=bit mode in 4-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="4" HwTyName="scalar" Name="a_1_0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Aggregating scalar variable 'a_0_2' with compact=bit mode in 4-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="4" HwTyName="scalar" Name="a_0_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Aggregating scalar variable 'a_0_1' with compact=bit mode in 4-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="4" HwTyName="scalar" Name="a_0_1"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Aggregating scalar variable 'a_0_0' with compact=bit mode in 4-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="4" HwTyName="scalar" Name="a_0_0"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

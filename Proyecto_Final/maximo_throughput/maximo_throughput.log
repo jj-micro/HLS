@@ -1,0 +1,697 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 8 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-1510] Running: source ./Proyecto_Final/maximo_throughput/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_unroll det/Init 
+INFO: [HLS 200-1510] Running: set_directive_unroll det/Calc 
+INFO: [HLS 200-1510] Running: set_directive_unroll matrixmul/Row 
+INFO: [HLS 200-1510] Running: set_directive_unroll matrixmul/Col 
+INFO: [HLS 200-1510] Running: set_directive_unroll matrixmul/Product 
+INFO: [HLS 200-1510] Running: set_directive_unroll matrixsum/Row 
+INFO: [HLS 200-1510] Running: set_directive_unroll matrixsum/Col 
+INFO: [HLS 200-1510] Running: set_directive_top -name matrixcalc matrixcalc 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.294 seconds; current allocated memory: 0.477 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 8 -name default 
+INFO: [HLS 200-1510] Running: source ./Proyecto_Final/maximo_throughput/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_unroll det/Init 
+INFO: [HLS 200-1510] Running: set_directive_unroll det/Calc 
+INFO: [HLS 200-1510] Running: set_directive_unroll matrixmul/Row 
+INFO: [HLS 200-1510] Running: set_directive_unroll matrixmul/Col 
+INFO: [HLS 200-1510] Running: set_directive_unroll matrixmul/Product 
+INFO: [HLS 200-1510] Running: set_directive_unroll matrixsum/Row 
+INFO: [HLS 200-1510] Running: set_directive_unroll matrixsum/Col 
+INFO: [HLS 200-1510] Running: set_directive_top -name matrixcalc matrixcalc 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.097 seconds; current allocated memory: 977.660 MB.
+INFO: [HLS 200-10] Analyzing design file 'matrixcalc.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.59 seconds; current allocated memory: 979.469 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-131] Inlining function 'matrixmul(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])' into 'matrixcalc(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])' (matrixcalc.cpp:86:2)
+INFO: [HLS 214-131] Inlining function 'det(ap_int<4> (*) [3])' into 'matrixcalc(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])' (matrixcalc.cpp:88:16)
+INFO: [HLS 214-131] Inlining function 'matrixsum(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])' into 'matrixcalc(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])' (matrixcalc.cpp:87:2)
+INFO: [HLS 214-291] Loop 'Init' is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:11:7)
+INFO: [HLS 214-291] Loop 'Calc' is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:15:7)
+INFO: [HLS 214-291] Loop 'Row' is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:56:7)
+INFO: [HLS 214-291] Loop 'Col' is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:58:10)
+INFO: [HLS 214-291] Loop 'Row' is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:37:7)
+INFO: [HLS 214-291] Loop 'Col' is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:39:10)
+INFO: [HLS 214-291] Loop 'Product' is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:42:16)
+INFO: [HLS 214-186] Unrolling loop 'Init' (matrixcalc.cpp:11:7) in function 'matrixcalc' completely with a factor of 3 (matrixcalc.cpp:68:0)
+INFO: [HLS 214-186] Unrolling loop 'Calc' (matrixcalc.cpp:15:7) in function 'matrixcalc' completely with a factor of 3 (matrixcalc.cpp:68:0)
+INFO: [HLS 214-186] Unrolling loop 'Row' (matrixcalc.cpp:56:7) in function 'matrixcalc' completely with a factor of 3 (matrixcalc.cpp:68:0)
+INFO: [HLS 214-186] Unrolling loop 'Col' (matrixcalc.cpp:58:10) in function 'matrixcalc' completely with a factor of 3 (matrixcalc.cpp:68:0)
+INFO: [HLS 214-186] Unrolling loop 'Row' (matrixcalc.cpp:37:7) in function 'matrixcalc' completely with a factor of 3 (matrixcalc.cpp:68:0)
+INFO: [HLS 214-186] Unrolling loop 'Col' (matrixcalc.cpp:39:10) in function 'matrixcalc' completely with a factor of 3 (matrixcalc.cpp:68:0)
+INFO: [HLS 214-186] Unrolling loop 'Product' (matrixcalc.cpp:42:16) in function 'matrixcalc' completely with a factor of 3 (matrixcalc.cpp:68:0)
+INFO: [HLS 214-248] Applying array_partition to 'a': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (matrixcalc.cpp:68:0)
+INFO: [HLS 214-248] Applying array_partition to 'b': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (matrixcalc.cpp:68:0)
+INFO: [HLS 214-248] Applying array_partition to 'c': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_2_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_2_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_2_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_1_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_1_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_1_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_0_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_0_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_0_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_2_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_2_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_2_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_1_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_1_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_1_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_0_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_0_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_0_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_2_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_2_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_2_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_1_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_1_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_1_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_0_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_0_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_0_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.417 seconds; current allocated memory: 980.641 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 980.641 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.108 seconds; current allocated memory: 985.367 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.023 seconds; current allocated memory: 986.762 MB.
+INFO: [XFORM 203-11] Balancing expressions in function 'matrixcalc' (matrixcalc.cpp:20:2)...27 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.056 seconds; current allocated memory: 1007.508 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.045 seconds; current allocated memory: 1007.523 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matrixcalc' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrixcalc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'matrixcalc'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, function 'matrixcalc'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.351 seconds; current allocated memory: 1007.523 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.078 seconds; current allocated memory: 1008.070 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrixcalc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_0_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_0_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_0_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_1_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_1_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_1_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_2_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_2_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_2_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_0_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_0_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_0_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_1_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_1_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_1_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_2_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_2_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_2_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_0_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_0_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_0_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_1_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_1_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_1_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_2_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_2_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_2_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matrixcalc' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'matrixcalc' pipeline 'matrixcalc' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_4s_4s_4_1_1': 37 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrixcalc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.137 seconds; current allocated memory: 1010.922 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.343 seconds; current allocated memory: 1017.648 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.394 seconds; current allocated memory: 1022.250 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for matrixcalc.
+INFO: [VLOG 209-307] Generating Verilog RTL for matrixcalc.
+INFO: [HLS 200-789] **** Estimated Fmax: 172.12 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 6.656 seconds; current allocated memory: 44.930 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 8 -name default 
+INFO: [HLS 200-1510] Running: source ./Proyecto_Final/maximo_throughput/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_unroll det/Init 
+INFO: [HLS 200-1510] Running: set_directive_unroll det/Calc 
+INFO: [HLS 200-1510] Running: set_directive_unroll matrixmul/Row 
+INFO: [HLS 200-1510] Running: set_directive_unroll matrixmul/Col 
+INFO: [HLS 200-1510] Running: set_directive_unroll matrixmul/Product 
+INFO: [HLS 200-1510] Running: set_directive_unroll matrixsum/Row 
+INFO: [HLS 200-1510] Running: set_directive_unroll matrixsum/Col 
+INFO: [HLS 200-1510] Running: set_directive_top -name matrixcalc matrixcalc 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.075 seconds; current allocated memory: 978.004 MB.
+INFO: [HLS 200-10] Analyzing design file 'matrixcalc.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.282 seconds; current allocated memory: 979.695 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-131] Inlining function 'matrixmul(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])' into 'matrixcalc(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])' (matrixcalc.cpp:86:2)
+INFO: [HLS 214-131] Inlining function 'det(ap_int<4> (*) [3])' into 'matrixcalc(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])' (matrixcalc.cpp:88:16)
+INFO: [HLS 214-131] Inlining function 'matrixsum(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])' into 'matrixcalc(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])' (matrixcalc.cpp:87:2)
+INFO: [HLS 214-291] Loop 'Init' is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:11:7)
+INFO: [HLS 214-291] Loop 'Calc' is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:15:7)
+INFO: [HLS 214-291] Loop 'Row' is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:56:7)
+INFO: [HLS 214-291] Loop 'Col' is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:58:10)
+INFO: [HLS 214-291] Loop 'Row' is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:37:7)
+INFO: [HLS 214-291] Loop 'Col' is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:39:10)
+INFO: [HLS 214-291] Loop 'Product' is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:42:16)
+INFO: [HLS 214-186] Unrolling loop 'Init' (matrixcalc.cpp:11:7) in function 'matrixcalc' completely with a factor of 3 (matrixcalc.cpp:68:0)
+INFO: [HLS 214-186] Unrolling loop 'Calc' (matrixcalc.cpp:15:7) in function 'matrixcalc' completely with a factor of 3 (matrixcalc.cpp:68:0)
+INFO: [HLS 214-186] Unrolling loop 'Row' (matrixcalc.cpp:56:7) in function 'matrixcalc' completely with a factor of 3 (matrixcalc.cpp:68:0)
+INFO: [HLS 214-186] Unrolling loop 'Col' (matrixcalc.cpp:58:10) in function 'matrixcalc' completely with a factor of 3 (matrixcalc.cpp:68:0)
+INFO: [HLS 214-186] Unrolling loop 'Row' (matrixcalc.cpp:37:7) in function 'matrixcalc' completely with a factor of 3 (matrixcalc.cpp:68:0)
+INFO: [HLS 214-186] Unrolling loop 'Col' (matrixcalc.cpp:39:10) in function 'matrixcalc' completely with a factor of 3 (matrixcalc.cpp:68:0)
+INFO: [HLS 214-186] Unrolling loop 'Product' (matrixcalc.cpp:42:16) in function 'matrixcalc' completely with a factor of 3 (matrixcalc.cpp:68:0)
+INFO: [HLS 214-248] Applying array_partition to 'a': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (matrixcalc.cpp:68:0)
+INFO: [HLS 214-248] Applying array_partition to 'b': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (matrixcalc.cpp:68:0)
+INFO: [HLS 214-248] Applying array_partition to 'c': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_2_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_2_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_2_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_1_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_1_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_1_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_0_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_0_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_0_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_2_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_2_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_2_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_1_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_1_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_1_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_0_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_0_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_0_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_2_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_2_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_2_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_1_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_1_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_1_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_0_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_0_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_0_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.179 seconds; current allocated memory: 981.102 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 981.102 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.012 seconds; current allocated memory: 985.852 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 986.949 MB.
+INFO: [XFORM 203-11] Balancing expressions in function 'matrixcalc' (matrixcalc.cpp:20:2)...27 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.035 seconds; current allocated memory: 1007.715 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.024 seconds; current allocated memory: 1007.734 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matrixcalc' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrixcalc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'matrixcalc'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 4, function 'matrixcalc'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.3 seconds; current allocated memory: 1007.734 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.065 seconds; current allocated memory: 1008.309 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrixcalc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_0_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_0_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_0_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_1_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_1_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_1_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_2_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_2_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_2_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_0_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_0_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_0_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_1_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_1_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_1_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_2_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_2_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_2_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_0_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_0_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_0_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_1_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_1_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_1_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_2_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_2_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_2_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matrixcalc' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'matrixcalc' pipeline 'matrixcalc' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_4s_4s_4_1_1': 37 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrixcalc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.113 seconds; current allocated memory: 1010.883 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.359 seconds; current allocated memory: 1017.086 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.446 seconds; current allocated memory: 1022.160 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for matrixcalc.
+INFO: [VLOG 209-307] Generating Verilog RTL for matrixcalc.
+INFO: [HLS 200-789] **** Estimated Fmax: 172.12 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 5.917 seconds; current allocated memory: 44.578 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1464] Running solution command: config_cosim -trace_level=all
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 8 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-1510] Running: config_cosim -tool xsim -trace_level all 
+INFO: [HLS 200-1510] Running: source ./Proyecto_Final/maximo_throughput/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_unroll det/Init 
+INFO: [HLS 200-1510] Running: set_directive_unroll det/Calc 
+INFO: [HLS 200-1510] Running: set_directive_unroll matrixmul/Row 
+INFO: [HLS 200-1510] Running: set_directive_unroll matrixmul/Col 
+INFO: [HLS 200-1510] Running: set_directive_unroll matrixmul/Product 
+INFO: [HLS 200-1510] Running: set_directive_unroll matrixsum/Row 
+INFO: [HLS 200-1510] Running: set_directive_unroll matrixsum/Col 
+INFO: [HLS 200-1510] Running: set_directive_top -name matrixcalc matrixcalc 
+INFO: [HLS 200-1510] Running: cosim_design -trace_level all 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 86.352 seconds; current allocated memory: 10.395 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1464] Running solution command: config_cosim -trace_level=all
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 8 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-1510] Running: config_cosim -tool xsim -trace_level all 
+INFO: [HLS 200-1510] Running: source ./Proyecto_Final/maximo_throughput/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_unroll det/Init 
+INFO: [HLS 200-1510] Running: set_directive_unroll det/Calc 
+INFO: [HLS 200-1510] Running: set_directive_unroll matrixmul/Row 
+INFO: [HLS 200-1510] Running: set_directive_unroll matrixmul/Col 
+INFO: [HLS 200-1510] Running: set_directive_unroll matrixmul/Product 
+INFO: [HLS 200-1510] Running: set_directive_unroll matrixsum/Row 
+INFO: [HLS 200-1510] Running: set_directive_unroll matrixsum/Col 
+INFO: [HLS 200-1510] Running: set_directive_top -name matrixcalc matrixcalc 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file Proyecto_Final/maximo_throughput/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 13.714 seconds; current allocated memory: 8.145 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1464] Running solution command: config_cosim -trace_level=all
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 8 -name default 
+INFO: [HLS 200-1510] Running: config_cosim -tool xsim -trace_level all 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./Proyecto_Final/maximo_throughput/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_unroll det/Init 
+INFO: [HLS 200-1510] Running: set_directive_unroll det/Calc 
+INFO: [HLS 200-1510] Running: set_directive_unroll matrixmul/Row 
+INFO: [HLS 200-1510] Running: set_directive_unroll matrixmul/Col 
+INFO: [HLS 200-1510] Running: set_directive_unroll matrixmul/Product 
+INFO: [HLS 200-1510] Running: set_directive_unroll matrixsum/Row 
+INFO: [HLS 200-1510] Running: set_directive_unroll matrixsum/Col 
+INFO: [HLS 200-1510] Running: set_directive_top -name matrixcalc matrixcalc 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.075 seconds; current allocated memory: 979.113 MB.
+INFO: [HLS 200-10] Analyzing design file 'matrixcalc.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.507 seconds; current allocated memory: 980.633 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-131] Inlining function 'matrixmul(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])' into 'matrixcalc(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])' (matrixcalc.cpp:86:2)
+INFO: [HLS 214-131] Inlining function 'det(ap_int<4> (*) [3])' into 'matrixcalc(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])' (matrixcalc.cpp:88:16)
+INFO: [HLS 214-131] Inlining function 'matrixsum(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])' into 'matrixcalc(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])' (matrixcalc.cpp:87:2)
+INFO: [HLS 214-291] Loop 'Init' is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:11:7)
+INFO: [HLS 214-291] Loop 'Calc' is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:15:7)
+INFO: [HLS 214-291] Loop 'Row' is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:56:7)
+INFO: [HLS 214-291] Loop 'Col' is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:58:10)
+INFO: [HLS 214-291] Loop 'Row' is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:37:7)
+INFO: [HLS 214-291] Loop 'Col' is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:39:10)
+INFO: [HLS 214-291] Loop 'Product' is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:42:16)
+INFO: [HLS 214-186] Unrolling loop 'Init' (matrixcalc.cpp:11:7) in function 'matrixcalc' completely with a factor of 3 (matrixcalc.cpp:68:0)
+INFO: [HLS 214-186] Unrolling loop 'Calc' (matrixcalc.cpp:15:7) in function 'matrixcalc' completely with a factor of 3 (matrixcalc.cpp:68:0)
+INFO: [HLS 214-186] Unrolling loop 'Row' (matrixcalc.cpp:56:7) in function 'matrixcalc' completely with a factor of 3 (matrixcalc.cpp:68:0)
+INFO: [HLS 214-186] Unrolling loop 'Col' (matrixcalc.cpp:58:10) in function 'matrixcalc' completely with a factor of 3 (matrixcalc.cpp:68:0)
+INFO: [HLS 214-186] Unrolling loop 'Row' (matrixcalc.cpp:37:7) in function 'matrixcalc' completely with a factor of 3 (matrixcalc.cpp:68:0)
+INFO: [HLS 214-186] Unrolling loop 'Col' (matrixcalc.cpp:39:10) in function 'matrixcalc' completely with a factor of 3 (matrixcalc.cpp:68:0)
+INFO: [HLS 214-186] Unrolling loop 'Product' (matrixcalc.cpp:42:16) in function 'matrixcalc' completely with a factor of 3 (matrixcalc.cpp:68:0)
+INFO: [HLS 214-248] Applying array_partition to 'a': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (matrixcalc.cpp:68:0)
+INFO: [HLS 214-248] Applying array_partition to 'b': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (matrixcalc.cpp:68:0)
+INFO: [HLS 214-248] Applying array_partition to 'c': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_2_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_2_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_2_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_1_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_1_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_1_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_0_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_0_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_0_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_2_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_2_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_2_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_1_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_1_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_1_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_0_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_0_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_0_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_2_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_2_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_2_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_1_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_1_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_1_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_0_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_0_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_0_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.301 seconds; current allocated memory: 982.227 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 982.227 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 987.047 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.021 seconds; current allocated memory: 988.184 MB.
+INFO: [XFORM 203-11] Balancing expressions in function 'matrixcalc' (matrixcalc.cpp:20:2)...27 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.057 seconds; current allocated memory: 1008.602 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.046 seconds; current allocated memory: 1008.617 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matrixcalc' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrixcalc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'matrixcalc'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 4, function 'matrixcalc'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.358 seconds; current allocated memory: 1008.617 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.136 seconds; current allocated memory: 1009.395 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrixcalc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_0_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_0_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_0_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_1_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_1_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_1_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_2_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_2_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_2_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_0_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_0_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_0_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_1_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_1_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_1_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_2_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_2_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_2_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_0_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_0_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_0_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_1_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_1_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_1_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_2_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_2_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_2_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matrixcalc' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'matrixcalc' pipeline 'matrixcalc' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_4s_4s_4_1_1': 37 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrixcalc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.124 seconds; current allocated memory: 1012.176 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.352 seconds; current allocated memory: 1018.672 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.457 seconds; current allocated memory: 1023.621 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for matrixcalc.
+INFO: [VLOG 209-307] Generating Verilog RTL for matrixcalc.
+INFO: [HLS 200-789] **** Estimated Fmax: 172.12 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 6.546 seconds; current allocated memory: 44.840 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1464] Running solution command: config_cosim -trace_level=all
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 8 -name default 
+INFO: [HLS 200-1510] Running: config_cosim -tool xsim -trace_level all 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./Proyecto_Final/maximo_throughput/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_unroll det/Init 
+INFO: [HLS 200-1510] Running: set_directive_unroll det/Calc 
+INFO: [HLS 200-1510] Running: set_directive_unroll matrixmul/Row 
+INFO: [HLS 200-1510] Running: set_directive_unroll matrixmul/Col 
+INFO: [HLS 200-1510] Running: set_directive_unroll matrixmul/Product 
+INFO: [HLS 200-1510] Running: set_directive_unroll matrixsum/Row 
+INFO: [HLS 200-1510] Running: set_directive_unroll matrixsum/Col 
+INFO: [HLS 200-1510] Running: set_directive_top -name matrixcalc matrixcalc 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.074 seconds; current allocated memory: 978.457 MB.
+INFO: [HLS 200-10] Analyzing design file 'matrixcalc.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.291 seconds; current allocated memory: 979.793 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-131] Inlining function 'matrixmul(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])' into 'matrixcalc(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])' (matrixcalc.cpp:86:2)
+INFO: [HLS 214-131] Inlining function 'det(ap_int<4> (*) [3])' into 'matrixcalc(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])' (matrixcalc.cpp:88:16)
+INFO: [HLS 214-131] Inlining function 'matrixsum(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])' into 'matrixcalc(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])' (matrixcalc.cpp:87:2)
+INFO: [HLS 214-291] Loop 'Init' is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:11:7)
+INFO: [HLS 214-291] Loop 'Calc' is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:15:7)
+INFO: [HLS 214-291] Loop 'Row' is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:56:7)
+INFO: [HLS 214-291] Loop 'Col' is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:58:10)
+INFO: [HLS 214-291] Loop 'Row' is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:37:7)
+INFO: [HLS 214-291] Loop 'Col' is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:39:10)
+INFO: [HLS 214-291] Loop 'Product' is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:42:16)
+INFO: [HLS 214-186] Unrolling loop 'Init' (matrixcalc.cpp:11:7) in function 'matrixcalc' completely with a factor of 3 (matrixcalc.cpp:68:0)
+INFO: [HLS 214-186] Unrolling loop 'Calc' (matrixcalc.cpp:15:7) in function 'matrixcalc' completely with a factor of 3 (matrixcalc.cpp:68:0)
+INFO: [HLS 214-186] Unrolling loop 'Row' (matrixcalc.cpp:56:7) in function 'matrixcalc' completely with a factor of 3 (matrixcalc.cpp:68:0)
+INFO: [HLS 214-186] Unrolling loop 'Col' (matrixcalc.cpp:58:10) in function 'matrixcalc' completely with a factor of 3 (matrixcalc.cpp:68:0)
+INFO: [HLS 214-186] Unrolling loop 'Row' (matrixcalc.cpp:37:7) in function 'matrixcalc' completely with a factor of 3 (matrixcalc.cpp:68:0)
+INFO: [HLS 214-186] Unrolling loop 'Col' (matrixcalc.cpp:39:10) in function 'matrixcalc' completely with a factor of 3 (matrixcalc.cpp:68:0)
+INFO: [HLS 214-186] Unrolling loop 'Product' (matrixcalc.cpp:42:16) in function 'matrixcalc' completely with a factor of 3 (matrixcalc.cpp:68:0)
+INFO: [HLS 214-248] Applying array_partition to 'a': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (matrixcalc.cpp:68:0)
+INFO: [HLS 214-248] Applying array_partition to 'b': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (matrixcalc.cpp:68:0)
+INFO: [HLS 214-248] Applying array_partition to 'c': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_2_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_2_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_2_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_1_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_1_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_1_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_0_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_0_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'c_0_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_2_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_2_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_2_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_1_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_1_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_1_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_0_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_0_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_0_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_2_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_2_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_2_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_1_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_1_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_1_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_0_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_0_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_0_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.087 seconds; current allocated memory: 981.547 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 981.547 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.012 seconds; current allocated memory: 986.219 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 987.324 MB.
+INFO: [XFORM 203-11] Balancing expressions in function 'matrixcalc' (matrixcalc.cpp:20:2)...27 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.035 seconds; current allocated memory: 1008.078 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.024 seconds; current allocated memory: 1008.090 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matrixcalc' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matrixcalc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'matrixcalc'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, function 'matrixcalc'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.34 seconds; current allocated memory: 1008.090 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.066 seconds; current allocated memory: 1008.383 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matrixcalc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_0_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_0_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_0_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_1_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_1_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_1_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_2_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_2_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_2_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_0_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_0_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_0_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_1_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_1_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_1_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_2_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_2_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/b_2_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_0_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_0_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_0_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_1_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_1_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_1_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_2_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_2_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/c_2_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matrixcalc' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'matrixcalc' pipeline 'matrixcalc' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_4s_4s_4_1_1': 37 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matrixcalc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.105 seconds; current allocated memory: 1011.008 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.336 seconds; current allocated memory: 1017.449 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.41 seconds; current allocated memory: 1022.695 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for matrixcalc.
+INFO: [VLOG 209-307] Generating Verilog RTL for matrixcalc.
+INFO: [HLS 200-789] **** Estimated Fmax: 172.12 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 5.805 seconds; current allocated memory: 44.578 MB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+Tool Version Limit: 2023.05
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+INFO: [HLS 200-1464] Running solution command: config_cosim -trace_level=all
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=8
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 8 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-1510] Running: config_cosim -tool xsim -trace_level all 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -vivado_clock 8 
+INFO: [HLS 200-1510] Running: source ./Proyecto_Final/maximo_throughput/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_unroll det/Init 
+INFO: [HLS 200-1510] Running: set_directive_unroll det/Calc 
+INFO: [HLS 200-1510] Running: set_directive_unroll matrixmul/Row 
+INFO: [HLS 200-1510] Running: set_directive_unroll matrixmul/Col 
+INFO: [HLS 200-1510] Running: set_directive_unroll matrixmul/Product 
+INFO: [HLS 200-1510] Running: set_directive_unroll matrixsum/Row 
+INFO: [HLS 200-1510] Running: set_directive_unroll matrixsum/Col 
+INFO: [HLS 200-1510] Running: set_directive_top -name matrixcalc matrixcalc 
+INFO: [HLS 200-1510] Running: export_design -flow impl -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [IMPL 213-8] Starting RTL evaluation using Vivado ...
+INFO: [HLS 200-802] Generated output file Proyecto_Final/maximo_throughput/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 177.852 seconds; current allocated memory: 8.684 MB.

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.074 seconds; current allocated memory: 978.457 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;matrixcalc.cpp&apos; ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.291 seconds; current allocated memory: 979.793 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-777]" key="HLS 200-777" tag="" content="Using interface defaults for &apos;Vivado&apos; flow target." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-131]" key="HLS 214-131" tag="" content="Inlining function &apos;matrixmul(ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3])&apos; into &apos;matrixcalc(ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3])&apos; (matrixcalc.cpp:86:2)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-131]" key="HLS 214-131" tag="" content="Inlining function &apos;det(ap_int&lt;4&gt; (*) [3])&apos; into &apos;matrixcalc(ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3])&apos; (matrixcalc.cpp:88:16)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-131]" key="HLS 214-131" tag="" content="Inlining function &apos;matrixsum(ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3])&apos; into &apos;matrixcalc(ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3])&apos; (matrixcalc.cpp:87:2)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-291]" key="HLS 214-291" tag="" content="Loop &apos;Init&apos; is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:11:7)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-291]" key="HLS 214-291" tag="" content="Loop &apos;Calc&apos; is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:15:7)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-291]" key="HLS 214-291" tag="" content="Loop &apos;Row&apos; is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:56:7)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-291]" key="HLS 214-291" tag="" content="Loop &apos;Col&apos; is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:58:10)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-291]" key="HLS 214-291" tag="" content="Loop &apos;Row&apos; is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:37:7)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-291]" key="HLS 214-291" tag="" content="Loop &apos;Col&apos; is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:39:10)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-291]" key="HLS 214-291" tag="" content="Loop &apos;Product&apos; is marked as complete unroll implied by the pipeline pragma (matrixcalc.cpp:42:16)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-186]" key="HLS 214-186" tag="" content="Unrolling loop &apos;Init&apos; (matrixcalc.cpp:11:7) in function &apos;matrixcalc&apos; completely with a factor of 3 (matrixcalc.cpp:68:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-186]" key="HLS 214-186" tag="" content="Unrolling loop &apos;Calc&apos; (matrixcalc.cpp:15:7) in function &apos;matrixcalc&apos; completely with a factor of 3 (matrixcalc.cpp:68:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-186]" key="HLS 214-186" tag="" content="Unrolling loop &apos;Row&apos; (matrixcalc.cpp:56:7) in function &apos;matrixcalc&apos; completely with a factor of 3 (matrixcalc.cpp:68:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-186]" key="HLS 214-186" tag="" content="Unrolling loop &apos;Col&apos; (matrixcalc.cpp:58:10) in function &apos;matrixcalc&apos; completely with a factor of 3 (matrixcalc.cpp:68:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-186]" key="HLS 214-186" tag="" content="Unrolling loop &apos;Row&apos; (matrixcalc.cpp:37:7) in function &apos;matrixcalc&apos; completely with a factor of 3 (matrixcalc.cpp:68:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-186]" key="HLS 214-186" tag="" content="Unrolling loop &apos;Col&apos; (matrixcalc.cpp:39:10) in function &apos;matrixcalc&apos; completely with a factor of 3 (matrixcalc.cpp:68:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-186]" key="HLS 214-186" tag="" content="Unrolling loop &apos;Product&apos; (matrixcalc.cpp:42:16) in function &apos;matrixcalc&apos; completely with a factor of 3 (matrixcalc.cpp:68:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-248]" key="HLS 214-248" tag="" content="Applying array_partition to &apos;a&apos;: Complete partitioning on dimension 1. Complete partitioning on dimension 2. (matrixcalc.cpp:68:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-248]" key="HLS 214-248" tag="" content="Applying array_partition to &apos;b&apos;: Complete partitioning on dimension 1. Complete partitioning on dimension 2. (matrixcalc.cpp:68:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-248]" key="HLS 214-248" tag="" content="Applying array_partition to &apos;c&apos;: Complete partitioning on dimension 1. Complete partitioning on dimension 2. (matrixcalc.cpp:68:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-241]" key="HLS 214-241" tag="" content="Aggregating scalar variable &apos;c_2_2&apos; with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-241]" key="HLS 214-241" tag="" content="Aggregating scalar variable &apos;c_2_1&apos; with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-241]" key="HLS 214-241" tag="" content="Aggregating scalar variable &apos;c_2_0&apos; with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-241]" key="HLS 214-241" tag="" content="Aggregating scalar variable &apos;c_1_2&apos; with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-241]" key="HLS 214-241" tag="" content="Aggregating scalar variable &apos;c_1_1&apos; with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-241]" key="HLS 214-241" tag="" content="Aggregating scalar variable &apos;c_1_0&apos; with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-241]" key="HLS 214-241" tag="" content="Aggregating scalar variable &apos;c_0_2&apos; with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-241]" key="HLS 214-241" tag="" content="Aggregating scalar variable &apos;c_0_1&apos; with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-241]" key="HLS 214-241" tag="" content="Aggregating scalar variable &apos;c_0_0&apos; with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-241]" key="HLS 214-241" tag="" content="Aggregating scalar variable &apos;b_2_2&apos; with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-241]" key="HLS 214-241" tag="" content="Aggregating scalar variable &apos;b_2_1&apos; with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-241]" key="HLS 214-241" tag="" content="Aggregating scalar variable &apos;b_2_0&apos; with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-241]" key="HLS 214-241" tag="" content="Aggregating scalar variable &apos;b_1_2&apos; with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-241]" key="HLS 214-241" tag="" content="Aggregating scalar variable &apos;b_1_1&apos; with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-241]" key="HLS 214-241" tag="" content="Aggregating scalar variable &apos;b_1_0&apos; with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-241]" key="HLS 214-241" tag="" content="Aggregating scalar variable &apos;b_0_2&apos; with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-241]" key="HLS 214-241" tag="" content="Aggregating scalar variable &apos;b_0_1&apos; with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-241]" key="HLS 214-241" tag="" content="Aggregating scalar variable &apos;b_0_0&apos; with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-241]" key="HLS 214-241" tag="" content="Aggregating scalar variable &apos;a_2_2&apos; with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-241]" key="HLS 214-241" tag="" content="Aggregating scalar variable &apos;a_2_1&apos; with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-241]" key="HLS 214-241" tag="" content="Aggregating scalar variable &apos;a_2_0&apos; with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-241]" key="HLS 214-241" tag="" content="Aggregating scalar variable &apos;a_1_2&apos; with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-241]" key="HLS 214-241" tag="" content="Aggregating scalar variable &apos;a_1_1&apos; with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-241]" key="HLS 214-241" tag="" content="Aggregating scalar variable &apos;a_1_0&apos; with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-241]" key="HLS 214-241" tag="" content="Aggregating scalar variable &apos;a_0_2&apos; with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-241]" key="HLS 214-241" tag="" content="Aggregating scalar variable &apos;a_0_1&apos; with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 214-241]" key="HLS 214-241" tag="" content="Aggregating scalar variable &apos;a_0_0&apos; with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.087 seconds; current allocated memory: 981.547 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 981.547 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1467" tag="" content="Starting code transformations ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.012 seconds; current allocated memory: 986.219 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1472" tag="" content="Checking synthesizability ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 987.324 MB." resolution=""/>
+	<Message severity="INFO" prefix="[XFORM 203-11]" key="XFORM_EXPR_BALANCE_STATUS_178" tag="" content="Balancing expressions in function &apos;matrixcalc&apos; (matrixcalc.cpp:20:2)...27 expression(s) balanced." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.035 seconds; current allocated memory: 1008.078 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.024 seconds; current allocated memory: 1008.090 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1317" tag="" content="Starting hardware synthesis ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1385" tag="" content="Synthesizing &apos;matrixcalc&apos; ..." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;matrixcalc&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..." resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_46" tag="" content="Pipelining function &apos;matrixcalc&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1470]" key="HLS 200-1470" tag="SCHEDULE,VITIS_THROUGHPUT" content="Pipelining result : Target II = 1, Final II = 1, Depth = 4, function &apos;matrixcalc&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.34 seconds; current allocated memory: 1008.090 MB." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..." resolution=""/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.066 seconds; current allocated memory: 1008.383 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;matrixcalc&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;matrixcalc/a_0_0&apos; to &apos;ap_none&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;matrixcalc/a_0_1&apos; to &apos;ap_none&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;matrixcalc/a_0_2&apos; to &apos;ap_none&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;matrixcalc/a_1_0&apos; to &apos;ap_none&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;matrixcalc/a_1_1&apos; to &apos;ap_none&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;matrixcalc/a_1_2&apos; to &apos;ap_none&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;matrixcalc/a_2_0&apos; to &apos;ap_none&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;matrixcalc/a_2_1&apos; to &apos;ap_none&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;matrixcalc/a_2_2&apos; to &apos;ap_none&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;matrixcalc/b_0_0&apos; to &apos;ap_none&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;matrixcalc/b_0_1&apos; to &apos;ap_none&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;matrixcalc/b_0_2&apos; to &apos;ap_none&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;matrixcalc/b_1_0&apos; to &apos;ap_none&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;matrixcalc/b_1_1&apos; to &apos;ap_none&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;matrixcalc/b_1_2&apos; to &apos;ap_none&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;matrixcalc/b_2_0&apos; to &apos;ap_none&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;matrixcalc/b_2_1&apos; to &apos;ap_none&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;matrixcalc/b_2_2&apos; to &apos;ap_none&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;matrixcalc/c_0_0&apos; to &apos;ap_none&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;matrixcalc/c_0_1&apos; to &apos;ap_none&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;matrixcalc/c_0_2&apos; to &apos;ap_none&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;matrixcalc/c_1_0&apos; to &apos;ap_none&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;matrixcalc/c_1_1&apos; to &apos;ap_none&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;matrixcalc/c_1_2&apos; to &apos;ap_none&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;matrixcalc/c_2_0&apos; to &apos;ap_none&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;matrixcalc/c_2_1&apos; to &apos;ap_none&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;matrixcalc/c_2_2&apos; to &apos;ap_none&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on function &apos;matrixcalc&apos; to &apos;ap_ctrl_hs&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-1030]" key="HLS 200-1030" tag="" content="Apply Unified Pipeline Control on module &apos;matrixcalc&apos; pipeline &apos;matrixcalc&apos; pipeline type &apos;function pipeline&apos;" resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_855" tag="" content="Generating core module &apos;mul_4s_4s_4_1_1&apos;: 37 instance(s)." resolution=""/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;matrixcalc&apos;." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.105 seconds; current allocated memory: 1011.008 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.336 seconds; current allocated memory: 1017.449 MB." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.41 seconds; current allocated memory: 1022.695 MB." resolution=""/>
+	<Message severity="INFO" prefix="[VHDL 208-304]" key="VHDL_304_1066" tag="" content="Generating VHDL RTL for matrixcalc." resolution=""/>
+	<Message severity="INFO" prefix="[VLOG 209-307]" key="VLOG_307_1067" tag="" content="Generating Verilog RTL for matrixcalc." resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-789]" key="HLS 200-789" tag="THROUGHPUT,VITIS_KERNEL" content="**** Estimated Fmax: 172.12 MHz" resolution=""/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="RUNTIME" content="Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 5.805 seconds; current allocated memory: 44.578 MB." resolution=""/>
+</Messages>

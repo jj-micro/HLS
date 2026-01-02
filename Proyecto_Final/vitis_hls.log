@@ -1,0 +1,16 @@
+NOTE: Using modified tcl85t.dll from https://gitenterprise.xilinx.com/ACT/vitis_hls_tcl
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.1 (64-bit)
+  **** SW Build 3854077 on May  4 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source C:/Xilinx/Vitis_HLS/2023.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running 'C:/Xilinx/Vitis_HLS/2023.1/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'javie' on host 'jj-pc' (Windows NT_amd64 version 6.2) on Fri Jan 02 16:22:29 +0100 2026
+INFO: [HLS 200-10] In directory 'C:/Users/javie/Desktop/HLS/Proyecto_Final'
+INFO: [HLS 200-10] Bringing up Vitis HLS GUI ... 
+INFO: [HLS 200-112] Total CPU user time: 1 seconds. Total CPU system time: 0 seconds. Total elapsed time: 117.627 seconds; peak allocated memory: 7.520 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Fri Jan  2 16:23:39 2026...

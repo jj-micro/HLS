@@ -12,11 +12,11 @@ add_files -tb inputs.txt
 add_files -tb matrixcalc_test.cpp
 add_files -tb outputs.golden.txt
 open_solution "minima_latencia" -flow_target vivado
-set_part {xc7z020clg400-1}
+set_part {xc7z020-clg400-1}
 create_clock -period 8 -name default
 config_cosim -tool xsim -trace_level all
-#source "./Proyecto_Final/minima_latencia/directives.tcl"
+source "./Proyecto_Final/minima_latencia/directives.tcl"
 csim_design
 csynth_design
-cosim_design -trace_level all
+cosim_design -trace_level all -tool xsim
 export_design -format ip_catalog
