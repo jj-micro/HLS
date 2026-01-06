@@ -47,6 +47,11 @@
 			<location>C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.tcls</location>
 		</link>
 		<link>
+			<name>minimos_recursos/constraints</name>
+			<type>2</type>
+			<location>C:/Users/javie/Desktop/HLS/Proyecto_Final/minimos_recursos/.tcls</location>
+		</link>
+		<link>
 			<name>source/matrixcalc.cpp</name>
 			<type>1</type>
 			<location>C:/Users/javie/Desktop/HLS/matrixcalc.cpp</location>
@@ -100,6 +105,21 @@
 			<name>minima_latencia/constraints/script.tcl</name>
 			<type>1</type>
 			<location>C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/script.tcl</location>
+		</link>
+		<link>
+			<name>minimos_recursos/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>C:/Users/javie/Desktop/HLS/Proyecto_Final/minimos_recursos/minimos_recursos.directive</location>
+		</link>
+		<link>
+			<name>minimos_recursos/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>C:/Users/javie/Desktop/HLS/Proyecto_Final/minimos_recursos/directives.tcl</location>
+		</link>
+		<link>
+			<name>minimos_recursos/constraints/script.tcl</name>
+			<type>1</type>
+			<location>C:/Users/javie/Desktop/HLS/Proyecto_Final/minimos_recursos/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

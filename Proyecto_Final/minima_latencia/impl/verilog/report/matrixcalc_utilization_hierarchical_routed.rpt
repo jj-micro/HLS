@@ -1,0 +1,34 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+| Date         : Tue Jan  6 12:23:12 2026
+| Host         : JJ-PC running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -hierarchical_depth 5 -file ./report/matrixcalc_utilization_hierarchical_routed.rpt
+| Design       : bd_0_wrapper
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++-----------------------------+--------------------------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+|           Instance          |                   Module                   | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP Blocks |
++-----------------------------+--------------------------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+| bd_0_wrapper                |                                      (top) |        328 |        328 |       0 |    0 | 163 |      0 |      0 |          0 |
+|   bd_0_i                    |                                       bd_0 |        328 |        328 |       0 |    0 | 163 |      0 |      0 |          0 |
+|     hls_inst                |                            bd_0_hls_inst_0 |        328 |        328 |       0 |    0 | 163 |      0 |      0 |          0 |
+|       inst                  |                 bd_0_hls_inst_0_matrixcalc |        328 |        328 |       0 |    0 | 163 |      0 |      0 |          0 |
+|         (inst)              |                 bd_0_hls_inst_0_matrixcalc |        324 |        324 |       0 |    0 | 163 |      0 |      0 |          0 |
+|         mul_4s_4s_4_1_1_U35 | bd_0_hls_inst_0_matrixcalc_mul_4s_4s_4_1_1 |          4 |          4 |       0 |    0 |   0 |      0 |      0 |          0 |
++-----------------------------+--------------------------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+

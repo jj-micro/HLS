@@ -14,3 +14,4 @@
 start_gui
 source open_wave.tcl
 open_wave_config C:/Users/javie/Desktop/HLS/Proyecto_Final/maximo_throughput/sim/verilog/matrixcalc.wcfg
+close_sim

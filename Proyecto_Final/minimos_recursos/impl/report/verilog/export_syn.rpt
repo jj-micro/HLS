@@ -1,0 +1,193 @@
+================================================================
+== Vivado RTL Synthesis Results
+================================================================
++ General Information:
+    * Date:            Tue Jan 06 12:14:48 +0100 2026
+    * Version:         2023.1 (Build 3854077 on May  4 2023)
+    * Project:         Proyecto_Final
+    * Solution:        minimos_recursos (Vivado IP Flow Target)
+    * Product family:  zynq
+    * Target device:   xc7z020-clg400-1
+
+
+================================================================
+== Run Constraints & Options
+================================================================
++ Design Constraints & Options:
+    * RTL Synthesis target clock:  8 ns
+    * C-Synthesis target clock:    8 ns
+    * C-Synthesis uncertainty:     27%
+
++ RTL Synthesis Options:
+    * config_export -vivado_synth_strategy:     default
+    * config_export -vivado_synth_design_args:  -directive sdx_optimization_effort_high
+
++ Reporting Options:
+    * config_export -vivado_report_level:      2
+    * config_export -vivado_max_timing_paths:  10
+
+
+================================================================
+== RTL Synthesis Resource Summary
+================================================================
+LUT:              170
+FF:               110
+DSP:              0
+BRAM:             0
+URAM:             0
+SRL:              0
+
+
+================================================================
+== RTL Synthesis Timing Summary
+================================================================
+* Timing was met
++----------------+-------------+
+| Timing         | Period (ns) |
++----------------+-------------+
+| Target         | 8.000       |
+| Post-Synthesis | 7.053       |
++----------------+-------------+
+
+
+================================================================
+== RTL Synthesis Resources
+================================================================
++-------------------------+-----+-----+-----+------+------+-----+--------+------+---------+----------+-------------------+
+| Name                    | LUT | FF  | DSP | BRAM | URAM | SRL | Pragma | Impl | Latency | Variable | Source            |
++-------------------------+-----+-----+-----+------+------+-----+--------+------+---------+----------+-------------------+
+| inst                    | 170 | 110 |     |      |      |     |        |      |         |          |                   |
+|   (inst)                | 38  | 102 |     |      |      |     |        |      |         |          |                   |
+|   aux2_U                | 80  | 4   |     |      |      |     |        |      |         |          |                   |
+|     bind_storage ram_1p |     |     |     |      |      |     |        | auto | 1       | aux2     | matrixcalc.cpp:77 |
+|   aux_U                 | 52  | 4   |     |      |      |     |        |      |         |          |                   |
+|     bind_storage ram_1p |     |     |     |      |      |     |        | auto | 1       | aux      | matrixcalc.cpp:77 |
++-------------------------+-----+-----+-----+------+------+-----+--------+------+---------+----------+-------------------+
+
+
+================================================================
+== RTL Synthesis Fail Fast
+================================================================
++-----------------------------------------------------------+-----------+--------+--------+
+| Criteria                                                  | Guideline | Actual | Status |
++-----------------------------------------------------------+-----------+--------+--------+
+| LUT                                                       | 70%       | 0.32%  | OK     |
+| FD                                                        | 50%       | 0.10%  | OK     |
+| LUTRAM+SRL                                                | 25%       | 0.05%  | OK     |
+| MUXF7                                                     | 15%       | 0.00%  | OK     |
+| DSP                                                       | 80%       | 0.00%  | OK     |
+| RAMB/FIFO                                                 | 80%       | 0.00%  | OK     |
+| DSP+RAMB+URAM (Avg)                                       | 70%       | 0.00%  | OK     |
+| BUFGCE* + BUFGCTRL                                        | 24        | 0      | OK     |
+| DONT_TOUCH (cells/nets)                                   | 0         | 0      | OK     |
+| MARK_DEBUG (nets)                                         | 0         | 0      | OK     |
+| Control Sets                                              | 998       | 20     | OK     |
+| Average Fanout for modules > 100k cells                   | 4         | 0      | OK     |
+| Non-FD high fanout nets > 10k loads                       | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| TIMING-6 (No common primary clock between related clocks) | 0         | 0      | OK     |
+| TIMING-7 (No common node between related clocks)          | 0         | 0      | OK     |
+| TIMING-8 (No common period between related clocks)        | 0         | 0      | OK     |
+| TIMING-14 (LUT on the clock tree)                         | 0         | 0      | OK     |
+| TIMING-35 (No common node in paths with the same clock)   | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| Number of paths above max LUT budgeting (0.575ns)         | 0         | 0      | OK     |
+| Number of paths above max Net budgeting (0.403ns)         | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+
+
+================================================================
+== RTL Synthesis Timing Paths
+================================================================
+* Timing was met
++-------+-------+------------------+---------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path  | SLACK | STARTPOINT PIN   | ENDPOINT PIN                    | LOGIC LEVELS | MAX FANOUT | DATAPATH DELAY | DATAPATH LOGIC | DATAPATH NET |
+|       |       |                  |                                 |              |            |                |          DELAY |        DELAY |
++-------+-------+------------------+---------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path1 | 0.947 | reg_227_reg[0]/C | aux2_U/q0_reg[0]/D              |            6 |         20 |          6.953 |          1.609 |        5.344 |
+| Path2 | 0.947 | reg_227_reg[0]/C | aux2_U/q0_reg[1]/D              |            6 |         20 |          6.953 |          1.609 |        5.344 |
+| Path3 | 0.947 | reg_227_reg[0]/C | aux2_U/q0_reg[2]/D              |            6 |         20 |          6.953 |          1.609 |        5.344 |
+| Path4 | 0.947 | reg_227_reg[0]/C | aux2_U/q0_reg[3]/D              |            6 |         20 |          6.953 |          1.609 |        5.344 |
+| Path5 | 1.490 | reg_227_reg[0]/C | aux2_U/ram_reg_0_15_0_0/SP/ADR3 |            5 |         20 |          6.344 |          1.333 |        5.011 |
++-------+-------+------------------+---------------------------------+--------------+------------+----------------+----------------+--------------+
+
+    +----------------------------+----------------------+
+    | Path1 Cells                | Primitive Type       |
+    +----------------------------+----------------------+
+    | reg_227_reg[0]             | FLOP_LATCH.flop.FDRE |
+    | aux2_U/ap_CS_fsm[22]_i_1   | LUT.others.LUT3      |
+    | aux2_U/col_reg_346[2]_i_13 | LUT.others.LUT6      |
+    | aux2_U/col_reg_346[2]_i_4  | LUT.others.LUT6      |
+    | aux_U/reg_251[3]_i_5       | LUT.others.LUT4      |
+    | aux_U/ram_reg_0_15_0_0_i_4 | LUT.others.LUT6      |
+    | aux2_U/ram_reg_0_15_0_0/SP | DMEM.dram.RAM32X1S   |
+    | aux2_U/q0_reg[0]           | FLOP_LATCH.flop.FDRE |
+    +----------------------------+----------------------+
+
+    +----------------------------+----------------------+
+    | Path2 Cells                | Primitive Type       |
+    +----------------------------+----------------------+
+    | reg_227_reg[0]             | FLOP_LATCH.flop.FDRE |
+    | aux2_U/ap_CS_fsm[22]_i_1   | LUT.others.LUT3      |
+    | aux2_U/col_reg_346[2]_i_13 | LUT.others.LUT6      |
+    | aux2_U/col_reg_346[2]_i_4  | LUT.others.LUT6      |
+    | aux_U/reg_251[3]_i_5       | LUT.others.LUT4      |
+    | aux_U/ram_reg_0_15_0_0_i_4 | LUT.others.LUT6      |
+    | aux2_U/ram_reg_0_15_1_1/SP | DMEM.dram.RAM32X1S   |
+    | aux2_U/q0_reg[1]           | FLOP_LATCH.flop.FDRE |
+    +----------------------------+----------------------+
+
+    +----------------------------+----------------------+
+    | Path3 Cells                | Primitive Type       |
+    +----------------------------+----------------------+
+    | reg_227_reg[0]             | FLOP_LATCH.flop.FDRE |
+    | aux2_U/ap_CS_fsm[22]_i_1   | LUT.others.LUT3      |
+    | aux2_U/col_reg_346[2]_i_13 | LUT.others.LUT6      |
+    | aux2_U/col_reg_346[2]_i_4  | LUT.others.LUT6      |
+    | aux_U/reg_251[3]_i_5       | LUT.others.LUT4      |
+    | aux_U/ram_reg_0_15_0_0_i_4 | LUT.others.LUT6      |
+    | aux2_U/ram_reg_0_15_2_2/SP | DMEM.dram.RAM32X1S   |
+    | aux2_U/q0_reg[2]           | FLOP_LATCH.flop.FDRE |
+    +----------------------------+----------------------+
+
+    +----------------------------+----------------------+
+    | Path4 Cells                | Primitive Type       |
+    +----------------------------+----------------------+
+    | reg_227_reg[0]             | FLOP_LATCH.flop.FDRE |
+    | aux2_U/ap_CS_fsm[22]_i_1   | LUT.others.LUT3      |
+    | aux2_U/col_reg_346[2]_i_13 | LUT.others.LUT6      |
+    | aux2_U/col_reg_346[2]_i_4  | LUT.others.LUT6      |
+    | aux_U/reg_251[3]_i_5       | LUT.others.LUT4      |
+    | aux_U/ram_reg_0_15_0_0_i_4 | LUT.others.LUT6      |
+    | aux2_U/ram_reg_0_15_3_3/SP | DMEM.dram.RAM32X1S   |
+    | aux2_U/q0_reg[3]           | FLOP_LATCH.flop.FDRE |
+    +----------------------------+----------------------+
+
+    +----------------------------+----------------------+
+    | Path5 Cells                | Primitive Type       |
+    +----------------------------+----------------------+
+    | reg_227_reg[0]             | FLOP_LATCH.flop.FDRE |
+    | aux2_U/ap_CS_fsm[22]_i_1   | LUT.others.LUT3      |
+    | aux2_U/col_reg_346[2]_i_13 | LUT.others.LUT6      |
+    | aux2_U/col_reg_346[2]_i_4  | LUT.others.LUT6      |
+    | aux_U/reg_251[3]_i_5       | LUT.others.LUT4      |
+    | aux_U/ram_reg_0_15_0_0_i_4 | LUT.others.LUT6      |
+    | aux2_U/ram_reg_0_15_0_0/SP | DMEM.dram.RAM32X1S   |
+    +----------------------------+----------------------+
+
+
+================================================================
+== RTL Synthesis Vivado Reports
+================================================================
++--------------------------+-------------------------------------------------------------------+
+| Report Type              | Report Location                                                   |
++--------------------------+-------------------------------------------------------------------+
+| design_analysis          | impl/verilog/report/matrixcalc_design_analysis_synth.rpt          |
+| failfast                 | impl/verilog/report/matrixcalc_failfast_synth.rpt                 |
+| timing                   | impl/verilog/report/matrixcalc_timing_synth.rpt                   |
+| timing_paths             | impl/verilog/report/matrixcalc_timing_paths_synth.rpt             |
+| utilization              | impl/verilog/report/matrixcalc_utilization_synth.rpt              |
+| utilization_hierarchical | impl/verilog/report/matrixcalc_utilization_hierarchical_synth.rpt |
++--------------------------+-------------------------------------------------------------------+
+
+

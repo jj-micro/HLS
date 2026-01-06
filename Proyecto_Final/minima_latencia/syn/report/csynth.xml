@@ -552,7 +552,9 @@
         </Module>
     </ModuleInformation>
     <FIFOInformation/>
-    <UserConfigCommands/>
+    <UserConfigCommands>
+        <config_cosim trace_level="all"/>
+    </UserConfigCommands>
     <Args>
         <Arg ArgName="a" index="0" direction="in" srcType="ap_int&lt;4&gt;*" srcSize="8">
             <hwRefs>

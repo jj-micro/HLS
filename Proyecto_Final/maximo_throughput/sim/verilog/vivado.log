@@ -53,3 +53,7 @@ current_fileset: Time (s): cpu = 00:00:17 ; elapsed = 00:00:10 . Memory (MB): pe
 # open_wave_database matrixcalc.wdb
 INFO: [Wavedata 42-564]   Found protocol instance at /apatb_matrixcalc_top/AESL_inst_matrixcalc/AESL_inst_matrixcalc_activity
 open_wave_config C:/Users/javie/Desktop/HLS/Proyecto_Final/maximo_throughput/sim/verilog/matrixcalc.wcfg
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Jan  2 19:25:45 2026...

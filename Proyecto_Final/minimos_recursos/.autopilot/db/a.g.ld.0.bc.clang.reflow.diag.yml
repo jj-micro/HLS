@@ -1,0 +1,90 @@
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'matrixmul(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])'
+    DebugLoc:        { File: matrixcalc.cpp, Line: 34, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'matrixcalc(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])'
+    DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'matrixsum(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])'
+    DebugLoc:        { File: matrixcalc.cpp, Line: 53, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'matrixcalc(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])'
+    DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            AutoInline
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'det(ap_int<4> (*) [3])'
+    DebugLoc:        { File: matrixcalc.cpp, Line: 4, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'matrixcalc(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])'
+    DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        bram
+  - String:          ' variable '''
+  - Name:            c
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '4'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        bram
+  - String:          ' variable '''
+  - Name:            b
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '4'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: matrixcalc.cpp, Line: 68, Column: 0 }
+Function:        _Z10matrixcalcPA3_6ap_intILi4EES2_S2_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        bram
+  - String:          ' variable '''
+  - Name:            a
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '4'
+  - String:          '-bits'
+...

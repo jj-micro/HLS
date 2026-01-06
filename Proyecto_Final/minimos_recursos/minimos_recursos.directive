@@ -1,0 +1,69 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="det" label="Calc" functionLabel="">
+            <pragma name="UNROLL">
+                <option name="factor" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="det" label="Calc" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="off" value="" positionalBoolean="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="matrixmul" label="Product" functionLabel="">
+            <pragma name="UNROLL">
+                <option name="factor" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="matrixmul" label="Product" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="off" value="" positionalBoolean="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="matrixcalc" label="" functionLabel="">
+            <pragma name="ALLOCATION">
+                <option name="operation" value="" positionalBoolean="type"/>
+                <option name="instances" positionalBoolean="4" value="add"/>
+                <option name="limit" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="matrixcalc" label="" functionLabel="">
+            <pragma name="ALLOCATION">
+                <option name="operation" value="" positionalBoolean="type"/>
+                <option name="instances" positionalBoolean="4" value="mul"/>
+                <option name="limit" value="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="matrixsum" label="Col" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="off" value="" positionalBoolean="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="matrixsum" label="Row" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="off" value="" positionalBoolean="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="matrixcalc" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="matrixcalc"/>
+            </pragma>
+        </directive>
+        <directive functionName="det" label="Init" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="off" value="" positionalBoolean="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="matrixmul" label="Col" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="off" value="" positionalBoolean="1"/>
+            </pragma>
+        </directive>
+        <directive functionName="matrixmul" label="Row" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="off" value="" positionalBoolean="1"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

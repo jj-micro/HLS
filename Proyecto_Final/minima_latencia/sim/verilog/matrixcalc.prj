@@ -1,6 +1,0 @@
-sv work "glbl.v"
-sv xil_defaultlib "matrixcalc.autotb.v"
-sv xil_defaultlib "matrixcalc.v"
-sv xil_defaultlib "matrixcalc_mul_4s_4s_4_1_1.v"
-sv xil_defaultlib "dataflow_monitor.sv"
-

@@ -8,7 +8,10 @@
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matrixcalc.cpp:54:9" msg_body="HLS pragma dump">
         <args ARG_PragmaFunction="matrixsum" ARG_PragmaIsValid="1" ARG_PragmaType="inline" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
-    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/csynth.tcl:18:9" msg_body="HLS pragma dump">
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/csynth.tcl:19:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="matrixcalc" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=matrixcalc" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/directives.tcl:7:9" msg_body="HLS pragma dump">
         <args ARG_PragmaContext="directive" ARG_PragmaFunction="matrixcalc" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=matrixcalc" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
     </msg>
     <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="matrixcalc.cpp:69:9" msg_body="HLS pragma dump">

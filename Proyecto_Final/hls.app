@@ -1,4 +1,4 @@
-<project xmlns="com.autoesl.autopilot.project" top="matrixcalc" name="Proyecto_Final" projectType="C/C++">
+<project xmlns="com.autoesl.autopilot.project" name="Proyecto_Final" top="matrixcalc" projectType="C/C++">
     <includePaths/>
     <libraryPaths/>
     <Simulation>
@@ -12,8 +12,9 @@
         <file name="../../outputs.golden.txt" sc="0" tb="1" cflags="-Wno-unknown-pragmas" csimflags="" blackbox="false"/>
     </files>
     <solutions xmlns="">
-        <solution name="minima_latencia" status="inactive"/>
-        <solution name="maximo_throughput" status="active"/>
+        <solution name="minima_latencia" status="active"/>
+        <solution name="maximo_throughput" status="inactive"/>
+        <solution name="minimos_recursos" status="inactive"/>
     </solutions>
 </project>
 

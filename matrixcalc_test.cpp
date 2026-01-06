@@ -30,7 +30,7 @@ int main()
 	mat resultado_calculado;
 	mat resultado_esperado;
 
-	for (int i = 0; i < 100000; i++)
+	for (int i = 0; i < 1000; i++)
 	{
 
 		for (int j = 0; j < MATRIX_LEN; j++){

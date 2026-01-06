@@ -1,0 +1,167 @@
+
+
+================================================================
+== Synthesis Summary Report of 'matrixcalc'
+================================================================
++ General Information: 
+    * Date:           Tue Jan  6 12:05:22 2026
+    * Version:        2023.1 (Build 3854077 on May  4 2023)
+    * Project:        Proyecto_Final
+    * Solution:       minimos_recursos (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +--------------+------+------+---------+-----------+----------+---------+------+----------+------+----+-----------+----------+-----+
+    |    Modules   | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |      |    |           |          |     |
+    |    & Loops   | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined| BRAM | DSP|     FF    |    LUT   | URAM|
+    +--------------+------+------+---------+-----------+----------+---------+------+----------+------+----+-----------+----------+-----+
+    |+ matrixcalc  |     -|  0.05|      312|  2.496e+03|         -|      313|     -|        no|     -|   -|  111 (~0%)|  689 (1%)|    -|
+    | o Row        |     -|  5.84|      189|  1.512e+03|        63|        -|     3|        no|     -|   -|          -|         -|    -|
+    |  o Col       |     -|  5.84|       61|    488.000|        20|        -|     3|        no|     -|   -|          -|         -|    -|
+    |   o Product  |     -|  5.84|       17|    136.000|         5|        -|     3|        no|     -|   -|          -|         -|    -|
+    | o Row        |     -|  5.84|       45|    360.000|        15|        -|     3|        no|     -|   -|          -|         -|    -|
+    |  o Col       |     -|  5.84|       13|    104.000|         4|        -|     3|        no|     -|   -|          -|         -|    -|
+    | o Init       |     -|  5.84|       75|    600.000|        25|        -|     3|        no|     -|   -|          -|         -|    -|
+    |  o Calc      |     -|  5.84|       22|    176.000|         7|        -|     3|        no|     -|   -|          -|         -|    -|
+    +--------------+------+------+---------+-----------+----------+---------+------+----------+------+----+-----------+----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_MEMORY
++------------+-----------+----------+
+| Port       | Direction | Bitwidth |
++------------+-----------+----------+
+| a_address0 | out       | 4        |
+| a_q0       | in        | 4        |
+| b_address0 | out       | 4        |
+| b_q0       | in        | 4        |
+| c_address0 | out       | 4        |
+| c_q0       | in        | 4        |
++------------+-----------+----------+
+
+* Other Ports
++-----------+-----------+----------+
+| Port      | Direction | Bitwidth |
++-----------+-----------+----------+
+| ap_return | out       | 32       |
++-----------+-----------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+------------+
+| Argument | Direction | Datatype   |
++----------+-----------+------------+
+| a        | in        | ap_int<4>* |
+| b        | in        | ap_int<4>* |
+| c        | in        | ap_int<4>* |
+| return   | out       | int        |
++----------+-----------+------------+
+
+* SW-to-HW Mapping
++----------+--------------+---------+----------+
+| Argument | HW Interface | HW Type | HW Usage |
++----------+--------------+---------+----------+
+| a        | a_address0   | port    | offset   |
+| a        | a_ce0        | port    |          |
+| a        | a_q0         | port    |          |
+| b        | b_address0   | port    | offset   |
+| b        | b_ce0        | port    |          |
+| b        | b_q0         | port    |          |
+| c        | c_address0   | port    | offset   |
+| c        | c_ce0        | port    |          |
+| c        | c_q0         | port    |          |
+| return   | ap_return    | port    |          |
++----------+--------------+---------+----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++------------------------+-----+--------+------------+-----+--------+---------+
+| Name                   | DSP | Pragma | Variable   | Op  | Impl   | Latency |
++------------------------+-----+--------+------------+-----+--------+---------+
+| + matrixcalc           | 0   |        |            |     |        |         |
+|   sub_ln43_fu_464_p2   | -   |        | sub_ln43   | sub | fabric | 0       |
+|   grp_fu_263_p2        | -   |        | add_ln37   | add | fabric | 0       |
+|   grp_fu_263_p2        | -   |        | add_ln41   | add | fabric | 0       |
+|   grp_fu_263_p2        | -   |        | add_ln39   | add | fabric | 0       |
+|   grp_fu_263_p2        | -   |        | add_ln43_1 | add | fabric | 0       |
+|   sub_ln43_1_fu_515_p2 | -   |        | sub_ln43_1 | sub | fabric | 0       |
+|   grp_fu_263_p2        | -   |        | add_ln43_2 | add | fabric | 0       |
+|   grp_fu_263_p2        | -   |        | add_ln42   | add | fabric | 0       |
+|   mul_4s_4s_4_1_1_U1   | -   |        | mul_ln43   | mul | auto   | 0       |
+|   grp_fu_263_p2        | -   |        | add_ln43   | add | fabric | 0       |
+|   sub_ln59_fu_553_p2   | -   |        | sub_ln59   | sub | fabric | 0       |
+|   grp_fu_263_p2        | -   |        | add_ln56   | add | fabric | 0       |
+|   grp_fu_263_p2        | -   |        | add_ln59_1 | add | fabric | 0       |
+|   grp_fu_263_p2        | -   |        | add_ln58   | add | fabric | 0       |
+|   grp_fu_263_p2        | -   |        | add_ln59   | add | fabric | 0       |
+|   grp_fu_263_p2        | -   |        | add_ln11   | add | fabric | 0       |
+|   sub_ln20_fu_643_p2   | -   |        | sub_ln20   | sub | fabric | 0       |
+|   grp_fu_263_p2        | -   |        | j_3        | add | fabric | 0       |
+|   grp_fu_263_p2        | -   |        | add_ln17   | add | fabric | 0       |
+|   grp_fu_263_p2        | -   |        | add_ln19   | add | fabric | 0       |
+|   grp_fu_263_p2        | -   |        | col        | add | fabric | 0       |
+|   grp_fu_263_p2        | -   |        | add_ln20   | add | fabric | 0       |
+|   mul_4s_4s_4_1_1_U1   | -   |        | product1_1 | mul | auto   | 0       |
+|   sub_ln21_fu_692_p2   | -   |        | sub_ln21   | sub | fabric | 0       |
+|   sub_ln21_1_fu_708_p2 | -   |        | sub_ln21_1 | sub | fabric | 0       |
+|   grp_fu_263_p2        | -   |        | add_ln21   | add | fabric | 0       |
+|   mul_4s_4s_4_1_1_U1   | -   |        | product2_1 | mul | auto   | 0       |
+|   grp_fu_263_p2        | -   |        | sumpos_1   | add | fabric | 0       |
+|   grp_fu_263_p2        | -   |        | sumneg_1   | add | fabric | 0       |
+|   sum_fu_621_p2        | -   |        | sum        | sub | fabric | 0       |
++------------------------+-----+--------+------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++--------------+------+------+--------+----------+---------+------+---------+
+| Name         | BRAM | URAM | Pragma | Variable | Storage | Impl | Latency |
++--------------+------+------+--------+----------+---------+------+---------+
+| + matrixcalc | 0    | 0    |        |          |         |      |         |
+|   aux_U      | -    | -    |        | aux      | ram_1p  | auto | 1       |
+|   aux2_U     | -    | -    |        | aux2     | ram_1p  | auto | 1       |
++--------------+------+------+--------+----------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++------------+---------------------------------+-----------------------------------------------------------------+
+| Type       | Options                         | Location                                                        |
++------------+---------------------------------+-----------------------------------------------------------------+
+| pipeline   | off                             | Proyecto_Final/minimos_recursos/directives.tcl:8 in det         |
+| pipeline   | off                             | Proyecto_Final/minimos_recursos/directives.tcl:16 in det        |
+| unroll     | factor=1                        | Proyecto_Final/minimos_recursos/directives.tcl:7 in det         |
+| allocation | operation instances=add limit=1 | Proyecto_Final/minimos_recursos/directives.tcl:11 in matrixcalc |
+| allocation | operation instances=mul limit=1 | Proyecto_Final/minimos_recursos/directives.tcl:12 in matrixcalc |
+| pipeline   | off                             | Proyecto_Final/minimos_recursos/directives.tcl:10 in matrixmul  |
+| pipeline   | off                             | Proyecto_Final/minimos_recursos/directives.tcl:17 in matrixmul  |
+| pipeline   | off                             | Proyecto_Final/minimos_recursos/directives.tcl:18 in matrixmul  |
+| unroll     | factor=1                        | Proyecto_Final/minimos_recursos/directives.tcl:9 in matrixmul   |
+| pipeline   | off                             | Proyecto_Final/minimos_recursos/directives.tcl:13 in matrixsum  |
+| pipeline   | off                             | Proyecto_Final/minimos_recursos/directives.tcl:14 in matrixsum  |
++------------+---------------------------------+-----------------------------------------------------------------+
+
+

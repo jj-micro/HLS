@@ -7,7 +7,10 @@ matrixcalc.cpp:35:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_
 matrixcalc.cpp:54:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=inline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=matrixsum_XLX_SEP_ PragmaOptions=_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS INLINE
         ^
-C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/csynth.tcl:18:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=matrixcalc_XLX_SEP_ PragmaOptions=name=matrixcalc_XLX_SEP_ [-Wdump-hls-pragmas]
+C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/csynth.tcl:19:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=matrixcalc_XLX_SEP_ PragmaOptions=name=matrixcalc_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=matrixcalc
+        ^
+C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/directives.tcl:7:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=matrixcalc_XLX_SEP_ PragmaOptions=name=matrixcalc_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLSDIRECTIVE TOP name=matrixcalc
         ^
 matrixcalc.cpp:69:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=matrixcalc_XLX_SEP_ PragmaOptions=ap_ctrl_hs port=return_XLX_SEP_ [-Wdump-hls-pragmas]
@@ -31,4 +34,4 @@ matrixcalc.cpp:81:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_
 matrixcalc.cpp:84:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=pipeline_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=matrixcalc_XLX_SEP_ PragmaOptions=II=1_XLX_SEP_ [-Wdump-hls-pragmas]
 #pragma HLS PIPELINE II=1
         ^
-11 warnings generated.
+12 warnings generated.

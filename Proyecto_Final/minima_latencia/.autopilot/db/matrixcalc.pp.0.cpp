@@ -5786,7 +5786,11 @@ __attribute__((sdx_kernel("matrixcalc", 0))) int matrixcalc(
        ap_int<4> b[3][3],
     ap_int<4> c[3][3])
 {
-#line 18 "C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/csynth.tcl"
+#line 19 "C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/csynth.tcl"
+#pragma HLSDIRECTIVE TOP name=matrixcalc
+# 68 "matrixcalc.cpp"
+
+#line 7 "C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/directives.tcl"
 #pragma HLSDIRECTIVE TOP name=matrixcalc
 # 68 "matrixcalc.cpp"
 

@@ -1,4 +1,4 @@
-INFO-FLOW: Workspace C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1 opened at Sat Dec 27 16:37:16 +0100 2025
+INFO-FLOW: Workspace C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia opened at Tue Jan 06 12:19:47 +0100 2026
 Execute     ap_set_clock -name default -period 8 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
 Execute     set_part xc7z020-clg400-1 
@@ -7,7 +7,7 @@ DBG:HLSDevice: Trying to load device library: C:/Xilinx/Vitis_HLS/2023.1\lib\win
 DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2023.1/data/parts/arch.xml
 DBG:HLSDevice: init success
 INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
-Command       create_platform done; 1.124 sec.
+Command       create_platform done; 2.341 sec.
 Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
@@ -18,19 +18,23 @@ Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/inter
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
-Command         ap_source done; 0.103 sec.
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
-Command       ap_source done; 0.137 sec.
 Execute       ap_part_info -name xc7z020-clg400-1 -data info 
 Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 1.284 sec.
+Command     set_part done; 2.424 sec.
 Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
 INFO: [HLS 200-1505] Using flow_target 'vivado'
-Command   open_solution done; 1.419 sec.
-Execute   set_part xc7z020clg400-1 
-INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
-Execute     create_platform xc7z020clg400-1 -board  
+Execute     send_msg_by_id INFO @200-1464@%s config_cosim -tool=xsim 
+INFO: [HLS 200-1464] Running solution command: config_cosim -tool=xsim
+Execute     config_cosim -tool=xsim 
+Execute     send_msg_by_id INFO @200-1464@%s config_cosim -trace_level=all 
+INFO: [HLS 200-1464] Running solution command: config_cosim -trace_level=all
+Execute     config_cosim -trace_level=all 
+Command   open_solution done; 2.515 sec.
+Execute   set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+Execute     create_platform xc7z020-clg400-1 -board  
 Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
@@ -43,17 +47,21 @@ Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/util
 Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
-Command     ap_source done; 0.128 sec.
 Execute     ap_part_info -name xc7z020-clg400-1 -data info 
 Execute     config_compile -quiet -complex-mul-dsp=0 
-Command   set_part done; 0.171 sec.
 Execute   create_clock -period 8 -name default 
 INFO: [HLS 200-1510] Running: create_clock -period 8 -name default 
+Execute   config_cosim -tool xsim -trace_level all 
+INFO: [HLS 200-1510] Running: config_cosim -tool xsim -trace_level all 
+Execute   source ./Proyecto_Final/minima_latencia/directives.tcl 
+INFO: [HLS 200-1510] Running: source ./Proyecto_Final/minima_latencia/directives.tcl
+Execute     set_directive_top -name matrixcalc matrixcalc 
+INFO: [HLS 200-1510] Running: set_directive_top -name matrixcalc matrixcalc 
 Execute   csynth_design 
 INFO: [HLS 200-1510] Running: csynth_design 
 INFO-FLOW: Running SLX 'csynth' proc: ::SLX::run_csynth
 Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
-INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.124 seconds; current allocated memory: 108.391 MB.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.073 seconds; current allocated memory: 978.301 MB.
 Execute       set_directive_top matrixcalc -name=matrixcalc 
 Execute       source C:/Xilinx/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
 Execute       source C:/Xilinx/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
@@ -64,56 +72,55 @@ INFO-FLOW: Handling matrixcalc.cpp as C++
 Execute       ap_part_info -name xc7z020-clg400-1 -data info 
 INFO-FLOW: Running: GCC PP 39
 INFO-FLOW: Source preprocessing
-INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang matrixcalc.cpp -foptimization-record-file=C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info --sysroot C:/Xilinx/Vitis_HLS/2023.1/tps/mingw/8.3.0/win64.o/nt -fhls -fno-exceptions -insert-hls-directive=C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/all.directive.json -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-mingw32 -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot -I C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -I /usr/include/x86_64-linux-gnu -o C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.pp.0.cpp {-hls-platform-db-name=C:/Xilinx/Vitis_HLS/2023.1/common/technology\xilinx/common/platform.db} -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg400-1 > C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.cpp.clang.out.log 2> C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.cpp.clang.err.log
-INFO-FLOW: Done: GCC PP 39 time: 0.4 seconds per iteration
+INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang matrixcalc.cpp -foptimization-record-file=C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info --sysroot C:/Xilinx/Vitis_HLS/2023.1/tps/mingw/8.3.0/win64.o/nt -fhls -fno-exceptions -insert-hls-directive=C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/all.directive.json -E -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-mingw32 -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot -I C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -I /usr/include/x86_64-linux-gnu -o C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.pp.0.cpp {-hls-platform-db-name=C:/Xilinx/Vitis_HLS/2023.1/common/technology\xilinx/common/platform.db} -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg400-1 > C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.cpp.clang.out.log 2> C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.cpp.clang.err.log
+INFO-FLOW: Done: GCC PP 39 time: 0.2 seconds per iteration
 INFO-FLOW: Source syntax check for synthesis
-INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.pp.0.cpp {-hls-platform-db-name=C:/Xilinx/Vitis_HLS/2023.1/common/technology\xilinx/common/platform.db} -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg400-1 > C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/clang.out.log 2> C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/clang.err.log
-Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.pp.0.cpp std=gnu++14 -target fpga  -directive=C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/.systemc_flag 
-INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/.systemc_flag -fix-errors C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 0.694 sec.
+INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.pp.0.cpp {-hls-platform-db-name=C:/Xilinx/Vitis_HLS/2023.1/common/technology\xilinx/common/platform.db} -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg400-1 > C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/clang.out.log 2> C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/clang.err.log
+Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.pp.0.cpp std=gnu++14 -target fpga  -directive=C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/.systemc_flag -fix-errors C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.298 sec.
 INFO-FLOW: Running: clang-tidy CDT preprocess 39
-Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.pp.0.cpp std=gnu++14 -target fpga  -directive=C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/all.directive.json 
-INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/all.directive.json -fix-errors C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
-Command       clang_tidy done; 0.859 sec.
-INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.9 seconds per iteration
+Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.pp.0.cpp std=gnu++14 -target fpga  -directive=C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/all.directive.json 
+INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/all.directive.json -fix-errors C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.409 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.4 seconds per iteration
 INFO-FLOW: Calling xilinx-label-all-loops ... 
 INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
-Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.pp.0.cpp std=gnu++14 -target fpga  
-INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.pp.0.cpp.clang-tidy.loop-label.out.log 2> C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.pp.0.cpp.clang-tidy.loop-label.err.log
+Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.pp.0.cpp.clang-tidy.loop-label.out.log 2> C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.pp.0.cpp.clang-tidy.loop-label.err.log
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
-Command       clang_tidy done; 1.08 sec.
-INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.pp.0.cpp.xilinx-dataflow-lawyer.err.log
+Command       clang_tidy done; 0.491 sec.
+INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.pp.0.cpp.xilinx-dataflow-lawyer.err.log
 Execute       ap_part_info -name xc7z020-clg400-1 -data info 
 INFO-FLOW: compiling source code to llvm bc
-INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot -I C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.bc {-hls-platform-db-name=C:/Xilinx/Vitis_HLS/2023.1/common/technology\xilinx/common/platform.db} -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg400-1 > C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.pp.0.cpp.clang.out.log 2> C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.pp.0.cpp.clang.err.log
-INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 5.243 seconds; current allocated memory: 109.586 MB.
+INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.pp.0.cpp -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -Wno-error=dump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot -I C:/Xilinx/Vitis_HLS/2023.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.bc {-hls-platform-db-name=C:/Xilinx/Vitis_HLS/2023.1/common/technology\xilinx/common/platform.db} -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg400-1 > C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.pp.0.cpp.clang.out.log 2> C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.pp.0.cpp.clang.err.log
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.346 seconds; current allocated memory: 979.574 MB.
 INFO-FLOW: Linking Debug ...
 INFO-FLOW: Linking dut bc code.
-Execute       run_link_or_opt -out C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.ld.0.bc -args  "C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.g.bc"  
-INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/llvm-link C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.g.bc -o C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.ld.0.bc > C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.ld.0.bc.llvm-link.out.log 2> C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.ld.0.bc.llvm-link.err.log
+Execute       run_link_or_opt -out C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.ld.0.bc -args  "C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.g.bc"  
+INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/llvm-link C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.g.bc -o C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.ld.0.bc > C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.ld.0.bc.llvm-link.out.log 2> C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.ld.0.bc.llvm-link.err.log
 INFO-FLOW: 
-Execute       run_link_or_opt -opt -out C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.ld.1.lower.bc -args C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
-INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.ld.1.lower.bc.opt.diag.yml C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.ld.1.lower.bc > C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.ld.1.lower.bc.opt.out.log 2> C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.ld.1.lower.bc.opt.err.log
+Execute       run_link_or_opt -opt -out C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.ld.1.lower.bc -args C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
+INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.ld.1.lower.bc.opt.diag.yml C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.ld.1.lower.bc > C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.ld.1.lower.bc.opt.out.log 2> C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.ld.1.lower.bc.opt.err.log
 INFO-FLOW: 
 INFO-FLOW: Running: gen_design_size_report post-opt
 INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds per iteration
-Command       run_link_or_opt done; 0.212 sec.
 INFO-FLOW: Linking math bc lib
-Execute       run_link_or_opt -out C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.ld.2.m1.bc -args C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.ld.1.lower.bc -only-needed C:/Xilinx/Vitis_HLS/2023.1/win64/lib/libhlsm_39.bc C:/Xilinx/Vitis_HLS/2023.1/win64/lib/libhlsmc++_39.bc 
-INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/llvm-link C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.ld.1.lower.bc -only-needed C:/Xilinx/Vitis_HLS/2023.1/win64/lib/libhlsm_39.bc C:/Xilinx/Vitis_HLS/2023.1/win64/lib/libhlsmc++_39.bc -o C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.ld.2.m1.bc > C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log
+Execute       run_link_or_opt -out C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.ld.2.m1.bc -args C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.ld.1.lower.bc -only-needed C:/Xilinx/Vitis_HLS/2023.1/win64/lib/libhlsm_39.bc C:/Xilinx/Vitis_HLS/2023.1/win64/lib/libhlsmc++_39.bc 
+INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/llvm-link C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.ld.1.lower.bc -only-needed C:/Xilinx/Vitis_HLS/2023.1/win64/lib/libhlsm_39.bc C:/Xilinx/Vitis_HLS/2023.1/win64/lib/libhlsmc++_39.bc -o C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.ld.2.m1.bc > C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log
 INFO-FLOW: 
-Command       run_link_or_opt done; 2.339 sec.
-Execute       run_link_or_opt -opt -out C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.ld.3.fpc.bc -args C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=matrixcalc -reflow-float-conversion 
-INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=matrixcalc -reflow-float-conversion -o C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.ld.3.fpc.bc > C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log
+Command       run_link_or_opt done; 1.108 sec.
+Execute       run_link_or_opt -opt -out C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.ld.3.fpc.bc -args C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=matrixcalc -reflow-float-conversion 
+INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=matrixcalc -reflow-float-conversion -o C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.ld.3.fpc.bc > C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log
 INFO-FLOW: 
 INFO-FLOW: Running: gen_design_size_report post-opt
 INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds per iteration
-Command       run_link_or_opt done; 0.955 sec.
-Execute       run_link_or_opt -out C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.ld.4.m2.bc -args C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed C:/Xilinx/Vitis_HLS/2023.1/win64/lib/libfloatconversion_39.bc 
-INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/llvm-link C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed C:/Xilinx/Vitis_HLS/2023.1/win64/lib/libfloatconversion_39.bc -o C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.ld.4.m2.bc > C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log
+Command       run_link_or_opt done; 0.505 sec.
+Execute       run_link_or_opt -out C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.ld.4.m2.bc -args C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.ld.3.fpc.bc -only-needed C:/Xilinx/Vitis_HLS/2023.1/win64/lib/libfloatconversion_39.bc 
+INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/llvm-link C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.ld.3.fpc.bc -only-needed C:/Xilinx/Vitis_HLS/2023.1/win64/lib/libfloatconversion_39.bc -o C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.ld.4.m2.bc > C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log
 INFO-FLOW: 
-Execute       run_link_or_opt -opt -out C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.ld.5.gdce.bc -args C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=matrixcalc 
-INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.ld.5.gdce.bc.opt.diag.yml C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=matrixcalc -o C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.ld.5.gdce.bc > C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.ld.5.gdce.bc.opt.out.log 2> C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.ld.5.gdce.bc.opt.err.log
+Execute       run_link_or_opt -opt -out C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.ld.5.gdce.bc -args C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=matrixcalc 
+INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.ld.5.gdce.bc.opt.diag.yml C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=matrixcalc -o C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.ld.5.gdce.bc > C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.ld.5.gdce.bc.opt.out.log 2> C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.ld.5.gdce.bc.opt.err.log
 INFO-FLOW: 
 INFO-FLOW: Running: gen_design_size_report post-opt
 INFO-FLOW: Done: gen_design_size_report post-opt time: 0 seconds per iteration
@@ -121,7 +128,7 @@ Execute       send_msg_by_id INFO @200-777@%s Vivado
 INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
 Execute       is_m_axi_addr64 
 INFO-FLOW: Doing LTO.
-INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.ld.0.bc.clang.reflow.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=matrixcalc -mllvm -hls-db-dir -mllvm C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshold=200000 -mllvm -reflow-auto-pipeline-threshold=64 -mllvm -reflow-enable-maxi-auto-id-channel=0 -mllvm -enable-fp-thr=0 -mllvm -reflow-bdd-simplify-threshold=1024 -mllvm -reflow-fanout-threshold=16 -mllvm -assume-maxi-align=1 -mllvm -reflow-pipeline-style-llvm-setting=2 -mllvm -reflow-enable-dataflow-strict-mode-checking=1 -ftime-report -mllvm -time-passes -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-array-partition=true -mllvm -reflow-enable-auto-parallel-performance-driven=true -mllvm -reflow-enable-partition-for-automation=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -reflow-reserved-saxilite-registers=1024 -mllvm -reflow-assume-no-address-wrap=true -mllvm -reflow-enable-occurrence-inference=true -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -mllvm -default-clock-period=8 -x ir C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.ld.5.gdce.bc -o C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.lto.bc {-hls-platform-db-name=C:/Xilinx/Vitis_HLS/2023.1/common/technology\xilinx/common/platform.db} -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg400-1 > C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.ld.0.bc.clang.reflow.out.log 2> C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.ld.0.bc.clang.reflow.err.log
+INFO-FLOW: run_clang exec: C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.ld.0.bc.clang.reflow.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=matrixcalc -mllvm -hls-db-dir -mllvm C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/kernel.internal.xml -mllvm -top-io-mapping-info=C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=false -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=0 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=0 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshold=200000 -mllvm -reflow-auto-pipeline-threshold=64 -mllvm -reflow-enable-maxi-auto-id-channel=0 -mllvm -enable-fp-thr=0 -mllvm -reflow-bdd-simplify-threshold=1024 -mllvm -reflow-fanout-threshold=16 -mllvm -assume-maxi-align=1 -mllvm -reflow-pipeline-style-llvm-setting=2 -mllvm -reflow-enable-dataflow-strict-mode-checking=1 -ftime-report -mllvm -time-passes -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-array-partition=true -mllvm -reflow-enable-auto-parallel-performance-driven=true -mllvm -reflow-enable-partition-for-automation=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -reflow-reserved-saxilite-registers=1024 -mllvm -reflow-assume-no-address-wrap=true -mllvm -reflow-enable-occurrence-inference=true -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -mllvm -default-clock-period=8 -x ir C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.ld.5.gdce.bc -o C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.lto.bc {-hls-platform-db-name=C:/Xilinx/Vitis_HLS/2023.1/common/technology\xilinx/common/platform.db} -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 -device-name-info=xc7z020clg400-1 > C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.ld.0.bc.clang.reflow.out.log 2> C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.ld.0.bc.clang.reflow.err.log
 INFO: [HLS 214-131] Inlining function 'matrixmul(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])' into 'matrixcalc(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])' (matrixcalc.cpp:86:2)
 INFO: [HLS 214-131] Inlining function 'det(ap_int<4> (*) [3])' into 'matrixcalc(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])' (matrixcalc.cpp:88:16)
 INFO: [HLS 214-131] Inlining function 'matrixsum(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])' into 'matrixcalc(ap_int<4> (*) [3], ap_int<4> (*) [3], ap_int<4> (*) [3])' (matrixcalc.cpp:87:2)
@@ -169,39 +176,37 @@ INFO: [HLS 214-241] Aggregating scalar variable 'a_1_0' with compact=bit mode in
 INFO: [HLS 214-241] Aggregating scalar variable 'a_0_2' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
 INFO: [HLS 214-241] Aggregating scalar variable 'a_0_1' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
 INFO: [HLS 214-241] Aggregating scalar variable 'a_0_0' with compact=bit mode in 4-bits (matrixcalc.cpp:68:0)
-INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/kernel.internal.xml
-INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 5.082 seconds; current allocated memory: 111.234 MB.
-INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.002 seconds; current allocated memory: 111.234 MB.
+INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: kernel.xml not generated: C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/kernel.internal.xml
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 2.334 seconds; current allocated memory: 981.461 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.001 seconds; current allocated memory: 981.461 MB.
 Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
 Execute         cleanup_all_models 
 INFO: [HLS 200-10] Starting code transformations ...
 INFO-FLOW: Running Standard Transforms...
-Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top matrixcalc -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -auto-shift-reg-idiom -promote-dbg-pointer -norm-name C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.0.bc -o C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.1.bc -f -phase std-opt 
-Command         transform done; 0.177 sec.
-INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.186 seconds; current allocated memory: 115.844 MB.
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top matrixcalc -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -auto-shift-reg-idiom -promote-dbg-pointer -norm-name C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.0.bc -o C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.019 seconds; current allocated memory: 986.070 MB.
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO-FLOW: Checking Synthesizability 1/2..
-Execute         transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -directive-preproc -mem2reg -dse -dce -globaldce C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.1.bc -o C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.2.prechk.bc -f 
-Command         transform done; 0.145 sec.
+Execute         transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -directive-preproc -mem2reg -dse -dce -globaldce C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.1.bc -o C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.2.prechk.bc -f 
 INFO-FLOW: Checking Synthesizability 2/2..
-Execute         transform -syn-check C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.2.prechk.bc -o C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.2.bc -f -phase syn-check 
-INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.151 seconds; current allocated memory: 117.055 MB.
+Execute         transform -syn-check C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.2.prechk.bc -o C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.012 seconds; current allocated memory: 987.250 MB.
 INFO-FLOW: Compiler optimizing ...
-INFO-FLOW: Share syncheck's 1.bc for syn flow: copy C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.g.1.bc to C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.g.1.bc to C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.o.1.bc
 INFO-FLOW: Presyn 1...
-Execute         transform -hls -tmp C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db -interface-port-rename -directive-preproc -mem2reg -dse -dce -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -prepare-dynamic-array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -accesses-merge -function-inline -complex-op-raise -inst-simplify -globaldce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -duplicate-dataflow-processes -check-dataflow-syntax -legalize-stream-variable -globaldce -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -hls-dead-arg-elim -deadargelim -directive-preproc -canonicalize-dataflow -dce -globaldce -scalar-preprocessing -scalar-propagation2 -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -hls-display -norm-name C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.o.1.bc -o C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.o.1.tmp.bc -f 
+Execute         transform -hls -tmp C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db -interface-port-rename -directive-preproc -mem2reg -dse -dce -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -prepare-dynamic-array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -accesses-merge -function-inline -complex-op-raise -inst-simplify -globaldce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -duplicate-dataflow-processes -check-dataflow-syntax -legalize-stream-variable -globaldce -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -hls-dead-arg-elim -deadargelim -directive-preproc -canonicalize-dataflow -dce -globaldce -scalar-preprocessing -scalar-propagation2 -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -hls-display -norm-name C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.o.1.bc -o C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.o.1.tmp.bc -f 
 INFO-FLOW: Presyn 2...
-Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -barrier -norm-name C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.o.1.tmp.bc -o C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.o.2.bc -f -phase presyn 
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -barrier -norm-name C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.o.1.tmp.bc -o C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.o.2.bc -f -phase presyn 
 INFO: [XFORM 203-11] Balancing expressions in function 'matrixcalc' (matrixcalc.cpp:20:2)...27 expression(s) balanced.
-INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.115 seconds; current allocated memory: 137.945 MB.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.044 seconds; current allocated memory: 1007.746 MB.
 INFO-FLOW: Building ssdm...
-Execute         transform -hls -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg-lite -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg-lite -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -deadargelim -globaldce -mem2reg -bram-byte-enable -load-elim -read-loop-dep -loop-simplify -loop-extract-inner -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable-spec-prop -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg-lite -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg-lite -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg-lite -loop-simplify -mergereturn -inst-simplify -inst-rectify -globaldce -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dce -dump-loop-dep-to-ir -check-all-ssdm -dump-complexity-metric -cdfg-build C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.o.2.bc -o C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+Execute         transform -hls -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg-lite -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg-lite -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -deadargelim -globaldce -mem2reg -bram-byte-enable -load-elim -read-loop-dep -loop-simplify -loop-extract-inner -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable-spec-prop -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg-lite -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg-lite -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg-lite -loop-simplify -mergereturn -inst-simplify -inst-rectify -globaldce -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dce -dump-loop-dep-to-ir -check-all-ssdm -dump-complexity-metric -cdfg-build C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.o.2.bc -o C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
 Execute           auto_get_db
-INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.094 seconds; current allocated memory: 137.961 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.024 seconds; current allocated memory: 1007.758 MB.
 INFO-FLOW: Finish building internal data model.
-Command       opt_and_import_c done; 0.553 sec.
-Command     elaborate done; 10.905 sec.
-Execute     ap_eval exec zip -j C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
+Command       opt_and_import_c done; 0.103 sec.
+Command     elaborate done; 4.804 sec.
+Execute     ap_eval exec zip -j C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
 Execute     autosyn -from_csynth_design=1 
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO-FLOW: Synthesizing C/C++ design ...
@@ -229,13 +234,13 @@ INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-61] Pipelining function 'matrixcalc'.
 INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 4, function 'matrixcalc'
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.672 sec.
-INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.744 seconds; current allocated memory: 137.961 MB.
-Execute       syn_report -verbosereport -o C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.verbose.sched.rpt 
+Command       schedule done; 0.258 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.29 seconds; current allocated memory: 1007.758 MB.
+Execute       syn_report -verbosereport -o C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.verbose.sched.rpt 
 Execute         list_part -family xc7z020-clg400-1 
 Execute           ap_family_info -name xc7z020-clg400-1 -data names 
 Execute           ap_part_info -quiet -name xc7z020-clg400-1 -data family 
-Execute       db_write -o C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.sched.adb -f 
+Execute       db_write -o C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.sched.adb -f 
 INFO-FLOW: Finish scheduling matrixcalc.
 Execute       set_default_model matrixcalc 
 Execute       bind -model matrixcalc 
@@ -244,12 +249,12 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 137.992 MB.
-Execute       syn_report -verbosereport -o C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.verbose.bind.rpt 
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.067 seconds; current allocated memory: 1007.793 MB.
+Execute       syn_report -verbosereport -o C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.verbose.bind.rpt 
 Execute         list_part -family xc7z020-clg400-1 
 Execute           ap_family_info -name xc7z020-clg400-1 -data names 
 Execute           ap_part_info -quiet -name xc7z020-clg400-1 -data family 
-Execute       db_write -o C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.bind.adb -f 
+Execute       db_write -o C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.bind.adb -f 
 INFO-FLOW: Finish binding matrixcalc.
 Execute       get_model_list matrixcalc -filter all-wo-channel 
 INFO-FLOW: Preprocessing for RTLGen ...
@@ -258,7 +263,7 @@ INFO-FLOW: Model list for RTL generation: matrixcalc
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'matrixcalc' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-Execute       create_rtl_model matrixcalc -top_prefix  -sub_prefix matrixcalc_ -mg_file C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.compgen.tcl 
+Execute       create_rtl_model matrixcalc -top_prefix  -sub_prefix matrixcalc_ -mg_file C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.compgen.tcl 
 INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_0_0' to 'ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_0_1' to 'ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'matrixcalc/a_0_2' to 'ap_none'.
@@ -290,49 +295,47 @@ INFO: [RTGEN 206-500] Setting interface mode on function 'matrixcalc' to 'ap_ctr
 INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'matrixcalc' pipeline 'matrixcalc' pipeline type 'function pipeline'
 INFO: [RTGEN 206-100] Generating core module 'mul_4s_4s_4_1_1': 37 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'matrixcalc'.
-Command       create_rtl_model done; 0.133 sec.
-INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.262 seconds; current allocated memory: 140.871 MB.
-Execute       source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.rtl_wrap.cfg.tcl 
-Execute       gen_rtl matrixcalc -istop -style xilinx -f -lang vhdl -o C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/syn/vhdl/matrixcalc 
-Execute       gen_rtl matrixcalc -istop -style xilinx -f -lang vlog -o C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/syn/verilog/matrixcalc 
-Execute       syn_report -csynth -model matrixcalc -o C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/syn/report/matrixcalc_csynth.rpt 
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.109 seconds; current allocated memory: 1010.676 MB.
+Execute       source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.rtl_wrap.cfg.tcl 
+Execute       gen_rtl matrixcalc -istop -style xilinx -f -lang vhdl -o C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/syn/vhdl/matrixcalc 
+Execute       gen_rtl matrixcalc -istop -style xilinx -f -lang vlog -o C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/syn/verilog/matrixcalc 
+Execute       syn_report -csynth -model matrixcalc -o C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/syn/report/matrixcalc_csynth.rpt 
 Execute         list_part -family xc7z020-clg400-1 
 Execute           ap_family_info -name xc7z020-clg400-1 -data names 
 Execute           ap_part_info -quiet -name xc7z020-clg400-1 -data family 
-Execute       syn_report -rtlxml -model matrixcalc -o C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/syn/report/matrixcalc_csynth.xml 
+Execute       syn_report -rtlxml -model matrixcalc -o C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/syn/report/matrixcalc_csynth.xml 
 Execute         list_part -family xc7z020-clg400-1 
 Execute           ap_family_info -name xc7z020-clg400-1 -data names 
 Execute           ap_part_info -quiet -name xc7z020-clg400-1 -data family 
-Execute       syn_report -verbosereport -model matrixcalc -o C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.verbose.rpt 
+Execute       syn_report -verbosereport -model matrixcalc -o C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.verbose.rpt 
 Execute         list_part -family xc7z020-clg400-1 
 Execute           ap_family_info -name xc7z020-clg400-1 -data names 
 Execute           ap_part_info -quiet -name xc7z020-clg400-1 -data family 
-Command       syn_report done; 0.113 sec.
-Execute       db_write -model matrixcalc -f -o C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.adb 
-Execute       db_write -model matrixcalc -bindview -o C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/design.bindinfo.xml 
-Execute       gen_tb_info matrixcalc -p C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db -o C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc 
-Execute       export_constraint_db -f -tool general -o C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.constraint.tcl 
-Execute       syn_report -designview -model matrixcalc -o C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.design.xml 
-Execute       syn_report -csynthDesign -model matrixcalc -o C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/syn/report/csynth.rpt -MHOut C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/kernel_module_hierarchy.tcl 
+Execute       db_write -model matrixcalc -f -o C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.adb 
+Execute       db_write -model matrixcalc -bindview -o C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info matrixcalc -p C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db -o C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc 
+Execute       export_constraint_db -f -tool general -o C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.constraint.tcl 
+Execute       syn_report -designview -model matrixcalc -o C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.design.xml 
+Execute       syn_report -csynthDesign -model matrixcalc -o C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/syn/report/csynth.rpt -MHOut C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/kernel_module_hierarchy.tcl 
 Execute         list_part -family xc7z020-clg400-1 
 Execute           ap_family_info -name xc7z020-clg400-1 -data names 
 Execute           ap_part_info -quiet -name xc7z020-clg400-1 -data family 
-Execute       syn_report -wcfg -model matrixcalc -o C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc_dataflow_ana.wcfg 
-Execute       syn_report -protoinst -model matrixcalc -o C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.protoinst 
+Execute       syn_report -wcfg -model matrixcalc -o C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc_dataflow_ana.wcfg 
+Execute       syn_report -protoinst -model matrixcalc -o C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.protoinst 
 Execute       sc_get_clocks matrixcalc 
 Execute       sc_get_portdomain matrixcalc 
 INFO-FLOW: Model list for RTL component generation: matrixcalc
 INFO-FLOW: Handling components in module [matrixcalc] ... 
-Execute       source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.compgen.tcl 
+Execute       source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.compgen.tcl 
 INFO-FLOW: Found component matrixcalc_mul_4s_4s_4_1_1.
 INFO-FLOW: Append model matrixcalc_mul_4s_4s_4_1_1
 INFO-FLOW: Append model matrixcalc
 INFO-FLOW: Generating RTL model list ...
 INFO-FLOW: All models in this session: matrixcalc_mul_4s_4s_4_1_1 matrixcalc
-INFO-FLOW: Generating C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/autopilot.rtl.models.txt file...
+INFO-FLOW: Generating C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/autopilot.rtl.models.txt file...
 INFO-FLOW: To file: write model matrixcalc_mul_4s_4s_4_1_1
 INFO-FLOW: To file: write model matrixcalc
-INFO-FLOW: Generating C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/autopilot.rtl.models.tcl file...
+INFO-FLOW: Generating C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/autopilot.rtl.models.tcl file...
 INFO-FLOW: Finished generating RTL model list.
 
 
@@ -340,13 +343,13 @@ INFO-FLOW: RTL Generation done.
 INFO-FLOW: CAS Generation done.
 INFO-FLOW: CBC Generation done.
 INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate_csynth_design
-INFO-FLOW: DBG:PUTS: read_platform_lib C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/global.setting.tcl
+INFO-FLOW: DBG:PUTS: read_platform_lib C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/global.setting.tcl
 Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/common.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/APCoreGen.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/op.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/op_simcore.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/interface.gen 
-Execute       source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/global.setting.tcl 
 Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
@@ -357,73 +360,71 @@ Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/inter
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
-Command         ap_source done; 0.11 sec.
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
-Command       ap_source done; 0.146 sec.
 INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=8.000 (was NA)
-INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::generate_ip_cores gen_sim_model='1' gen_fp_models='0' gen_for_export='0' dstSCDir='' dstVhdlDir='C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/vhdl' dstVlogDir='C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/vlog' tclDir='C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db' modelList='matrixcalc_mul_4s_4s_4_1_1
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::generate_ip_cores gen_sim_model='1' gen_fp_models='0' gen_for_export='0' dstSCDir='' dstVhdlDir='C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/vhdl' dstVlogDir='C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/vlog' tclDir='C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db' modelList='matrixcalc_mul_4s_4s_4_1_1
 matrixcalc
 ' expOnly='0'
-Execute       source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/global.setting.tcl 
 Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute       source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/global.setting.tcl 
-Execute       source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/global.setting.tcl 
-Execute       source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.compgen.tcl 
-INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.721 seconds; current allocated memory: 147.648 MB.
+Execute       source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.compgen.tcl 
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.349 seconds; current allocated memory: 1017.098 MB.
 INFO-FLOW: DBG:PROC: ::HLSREPORTS::create_csynth_xml bind_info_var='bind_info' RtlSubPrefix='matrixcalc_' outfile=''
 INFO-FLOW: Running: create_csynth_xml read xml data
 INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds per iteration
 INFO-FLOW: Running: create_csynth_xml bind info
 INFO-FLOW: Done: create_csynth_xml bind info time: 0 seconds per iteration
 INFO-FLOW: Running: create_csynth_xml config info
-INFO-FLOW: Done: create_csynth_xml config info time: 0.3 seconds per iteration
+INFO-FLOW: Done: create_csynth_xml config info time: 0.2 seconds per iteration
 INFO-FLOW: Running: create_csynth_xml write xml
 INFO-FLOW: Done: create_csynth_xml write xml time: 0 seconds per iteration
-INFO-FLOW: DBG:PUTS:      create_csynth_xml wrote csynth_xml=C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/syn/report/csynth.xml
+INFO-FLOW: DBG:PUTS:      create_csynth_xml wrote csynth_xml=C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/syn/report/csynth.xml
 INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='0' modelList='matrixcalc_mul_4s_4s_4_1_1
 matrixcalc
 ' rtl_lang='both' bootstrap_tcl='false' outdir='' outfilename=''
-Execute       source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/global.setting.tcl 
-Execute       source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/global.setting.tcl 
-Execute       source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/top-io-be.tcl 
-Execute       source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.tbgen.tcl 
-Execute       source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.rtl_wrap.cfg.tcl 
-Execute       source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.compgen.dataonly.tcl 
-Execute       source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.tbgen.tcl 
-Execute       source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/top-io-be.tcl 
+Execute       source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.tbgen.tcl 
+Execute       source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.rtl_wrap.cfg.tcl 
+Execute       source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.compgen.dataonly.tcl 
+Execute       source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.tbgen.tcl 
+Execute       source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/global.setting.tcl 
 Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute       source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.constraint.tcl 
+Execute       source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.constraint.tcl 
 Execute       sc_get_clocks matrixcalc 
-Execute       source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/global.setting.tcl 
 INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {} report_dict {TOPINST matrixcalc MODULE2INSTS {matrixcalc matrixcalc} INST2MODULE {matrixcalc matrixcalc} INSTDATA {matrixcalc {DEPTH 1 CHILDREN {}}} MODULEDATA {matrixcalc {BINDINFO {{BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_4s_4s_4_1_1_U1 SOURCE matrixcalc.cpp:43 VARIABLE mul_ln43 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_4s_4s_4_1_1_U2 SOURCE matrixcalc.cpp:43 VARIABLE mul_ln43_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_4s_4s_4_1_1_U3 SOURCE matrixcalc.cpp:43 VARIABLE mul_ln43_2 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_4s_4s_4_1_1_U4 SOURCE matrixcalc.cpp:43 VARIABLE mul_ln43_3 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_4s_4s_4_1_1_U5 SOURCE matrixcalc.cpp:43 VARIABLE mul_ln43_4 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_4s_4s_4_1_1_U6 SOURCE matrixcalc.cpp:43 VARIABLE mul_ln43_5 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_4s_4s_4_1_1_U7 SOURCE matrixcalc.cpp:43 VARIABLE mul_ln43_6 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_4s_4s_4_1_1_U8 SOURCE matrixcalc.cpp:43 VARIABLE mul_ln43_7 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_4s_4s_4_1_1_U9 SOURCE matrixcalc.cpp:43 VARIABLE mul_ln43_8 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_4s_4s_4_1_1_U10 SOURCE matrixcalc.cpp:43 VARIABLE mul_ln43_9 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_4s_4s_4_1_1_U11 SOURCE matrixcalc.cpp:43 VARIABLE mul_ln43_10 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_4s_4s_4_1_1_U12 SOURCE matrixcalc.cpp:43 VARIABLE mul_ln43_11 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_4s_4s_4_1_1_U13 SOURCE matrixcalc.cpp:43 VARIABLE mul_ln43_12 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_4s_4s_4_1_1_U14 SOURCE matrixcalc.cpp:43 VARIABLE mul_ln43_13 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_4s_4s_4_1_1_U15 SOURCE matrixcalc.cpp:43 VARIABLE mul_ln43_14 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_4s_4s_4_1_1_U16 SOURCE matrixcalc.cpp:43 VARIABLE mul_ln43_15 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_4s_4s_4_1_1_U17 SOURCE matrixcalc.cpp:43 VARIABLE mul_ln43_16 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_4s_4s_4_1_1_U18 SOURCE matrixcalc.cpp:43 VARIABLE mul_ln43_17 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_4s_4s_4_1_1_U19 SOURCE matrixcalc.cpp:43 VARIABLE mul_ln43_18 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_4s_4s_4_1_1_U20 SOURCE matrixcalc.cpp:43 VARIABLE mul_ln43_19 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_4s_4s_4_1_1_U21 SOURCE matrixcalc.cpp:43 VARIABLE mul_ln43_20 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_4s_4s_4_1_1_U22 SOURCE matrixcalc.cpp:43 VARIABLE mul_ln43_21 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_4s_4s_4_1_1_U23 SOURCE matrixcalc.cpp:43 VARIABLE mul_ln43_22 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_4s_4s_4_1_1_U24 SOURCE matrixcalc.cpp:43 VARIABLE mul_ln43_23 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_4s_4s_4_1_1_U25 SOURCE matrixcalc.cpp:43 VARIABLE mul_ln43_24 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_4s_4s_4_1_1_U26 SOURCE matrixcalc.cpp:43 VARIABLE mul_ln43_25 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_4s_4s_4_1_1_U27 SOURCE matrixcalc.cpp:43 VARIABLE mul_ln43_26 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln59_1_fu_402_p2 SOURCE matrixcalc.cpp:59 VARIABLE add_ln59_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln59_7_fu_408_p2 SOURCE matrixcalc.cpp:59 VARIABLE add_ln59_7 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln59_10_fu_414_p2 SOURCE matrixcalc.cpp:59 VARIABLE add_ln59_10 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln59_13_fu_420_p2 SOURCE matrixcalc.cpp:59 VARIABLE add_ln59_13 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln59_15_fu_426_p2 SOURCE matrixcalc.cpp:59 VARIABLE add_ln59_15 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln59_17_fu_432_p2 SOURCE matrixcalc.cpp:59 VARIABLE add_ln59_17 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln59_19_fu_438_p2 SOURCE matrixcalc.cpp:59 VARIABLE add_ln59_19 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln59_22_fu_444_p2 SOURCE matrixcalc.cpp:59 VARIABLE add_ln59_22 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln59_25_fu_450_p2 SOURCE matrixcalc.cpp:59 VARIABLE add_ln59_25 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_4s_4s_4_1_1_U28 SOURCE matrixcalc.cpp:20 VARIABLE mul_ln20 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_4s_4s_4_1_1_U34 SOURCE matrixcalc.cpp:20 VARIABLE product1_6 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_4s_4s_4_1_1_U29 SOURCE matrixcalc.cpp:21 VARIABLE product2_6 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_4s_4s_4_1_1_U30 SOURCE matrixcalc.cpp:20 VARIABLE product1_7 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_4s_4s_4_1_1_U31 SOURCE matrixcalc.cpp:21 VARIABLE product2_7 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_4s_4s_4_1_1_U32 SOURCE matrixcalc.cpp:20 VARIABLE product1_8 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_4s_4s_4_1_1_U33 SOURCE matrixcalc.cpp:21 VARIABLE mul_ln21_2 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_4s_4s_4_1_1_U35 SOURCE matrixcalc.cpp:21 VARIABLE product2_5 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sumpos_fu_585_p0 SOURCE matrixcalc.cpp:23 VARIABLE sub_ln23 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_4s_4s_4_1_1_U36 SOURCE matrixcalc.cpp:23 VARIABLE sumpos LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sumpos_3_fu_594_p0 SOURCE matrixcalc.cpp:23 VARIABLE sub_ln23_1 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL auto LATENCY 0 OPTYPE mul PRAGMA {} RTLNAME mul_4s_4s_4_1_1_U37 SOURCE matrixcalc.cpp:23 VARIABLE sumpos_3 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln24_fu_599_p2 SOURCE matrixcalc.cpp:24 VARIABLE add_ln24 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}}}}'
 INFO-FLOW: DBG:PUTS:      update_csynth_reports json2rpt_hw_sw_interfaces
 INFO-FLOW: Running: gen_csynth_sec_pragma
 INFO-FLOW: Done: gen_csynth_sec_pragma time: 0 seconds per iteration
 INFO-FLOW: DBG:PUTS:      update_csynth_reports wrote xml
 INFO-FLOW: DBG:PUTS:      update_csynth_reports appended to csynth rpt file
-INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.771 seconds; current allocated memory: 152.262 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.418 seconds; current allocated memory: 1022.211 MB.
 INFO: [VHDL 208-304] Generating VHDL RTL for matrixcalc.
 INFO: [VLOG 209-307] Generating Verilog RTL for matrixcalc.
 Execute       syn_report -model matrixcalc -printsummary 
 INFO: [HLS 200-789] **** Estimated Fmax: 172.12 MHz
-Command     autosyn done; 2.644 sec.
-Command   csynth_design done; 13.692 sec.
-INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 13.692 seconds; current allocated memory: 44.098 MB.
-Command ap_source done; 15.318 sec.
+Command     autosyn done; 1.223 sec.
+Command   csynth_design done; 6.102 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 6.102 seconds; current allocated memory: 44.273 MB.
+Command ap_source done; 8.74 sec.
 Execute cleanup_all 
-INFO-FLOW: Workspace C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1 opened at Sat Dec 27 16:40:46 +0100 2025
+INFO-FLOW: Workspace C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia opened at Tue Jan 06 12:20:17 +0100 2026
 Execute     ap_set_clock -name default -period 8 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
-Execute     set_part xc7z020clg400-1 
-Execute       create_platform xc7z020clg400-1 -board  
+Execute     set_part xc7z020-clg400-1 
+Execute       create_platform xc7z020-clg400-1 -board  
 DBG:HLSDevice: Trying to load device library: C:/Xilinx/Vitis_HLS/2023.1\lib\win64.o\xv_hlsvwrap.dll
 DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2023.1/data/parts/arch.xml
 DBG:HLSDevice: init success
 INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
-Command       create_platform done; 1.11 sec.
+Command       create_platform done; 2.266 sec.
 Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
@@ -434,13 +435,11 @@ Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/inter
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
-Command         ap_source done; 0.108 sec.
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
 Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
-Command       ap_source done; 0.146 sec.
 Execute       ap_part_info -name xc7z020-clg400-1 -data info 
 Execute       config_compile -quiet -complex-mul-dsp=0 
-Command     set_part done; 1.279 sec.
+Command     set_part done; 2.349 sec.
 Execute     send_msg_by_id INFO @200-1505@%s%s  vivado 
 INFO: [HLS 200-1505] Using flow_target 'vivado'
 Execute     send_msg_by_id INFO @200-1464@%s config_cosim -tool=xsim 
@@ -449,10 +448,19 @@ Execute     config_cosim -tool=xsim
 Execute     send_msg_by_id INFO @200-1464@%s config_cosim -trace_level=all 
 INFO: [HLS 200-1464] Running solution command: config_cosim -trace_level=all
 Execute     config_cosim -trace_level=all 
-Command   open_solution done; 1.415 sec.
-Execute   set_part xc7z020clg400-1 
-INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
-Execute     create_platform xc7z020clg400-1 -board  
+Execute     send_msg_by_id INFO @200-1464@%s config_export -format=ip_catalog 
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+Execute     config_export -format=ip_catalog 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -rtl=verilog 
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+Execute     config_export -rtl=verilog 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -vivado_clock=8 
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=8
+Execute     config_export -vivado_clock=8 
+Command   open_solution done; 2.431 sec.
+Execute   set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+Execute     create_platform xc7z020-clg400-1 -board  
 Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
@@ -465,28 +473,38 @@ Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/util
 Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
-Command     ap_source done; 0.122 sec.
 Execute     ap_part_info -name xc7z020-clg400-1 -data info 
 Execute     config_compile -quiet -complex-mul-dsp=0 
-Command   set_part done; 0.161 sec.
 Execute   create_clock -period 8 -name default 
 INFO: [HLS 200-1510] Running: create_clock -period 8 -name default 
-Execute     ap_set_clock -name default -period 8 -default=false 
-INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
 Execute   config_cosim -tool xsim -trace_level all 
 INFO: [HLS 200-1510] Running: config_cosim -tool xsim -trace_level all 
-Execute   cosim_design -trace_level all 
-INFO: [HLS 200-1510] Running: cosim_design -trace_level all 
-Execute     source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/global.setting.tcl 
-Execute     source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/global.setting.tcl 
-Execute     source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/global.setting.tcl 
-INFO-FLOW: DBG:PUTS: read_platform_lib C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/global.setting.tcl
+Execute   config_export -format ip_catalog -rtl verilog -vivado_clock 8 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -vivado_clock 8 
+Execute   source ./Proyecto_Final/minima_latencia/directives.tcl 
+INFO: [HLS 200-1510] Running: source ./Proyecto_Final/minima_latencia/directives.tcl
+Execute     set_directive_top -name matrixcalc matrixcalc 
+INFO: [HLS 200-1510] Running: set_directive_top -name matrixcalc matrixcalc 
+Execute   export_design -flow impl -rtl verilog -format ip_catalog 
+INFO: [HLS 200-1510] Running: export_design -flow impl -rtl verilog -format ip_catalog 
+Execute     config_export -flow=impl -format=ip_catalog -rtl=verilog 
+INFO-FLOW: DBG:PUTS: export_design_wrap: -format ip_catalog -flow impl -rtl verilog
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS:   auto_impl: pack: -export -rtl verilog
+INFO-FLOW: DBG:PROC: ::AESL_AUTOIMPL::auto_impl args='-export -rtl verilog'
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO-FLOW: DBG:PUTS: automg_wrap -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate args='-export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag'
+INFO-FLOW: DBG:PUTS:     auto_generate -export -pcore_version 1.00.a -rtl vlog -tool Vivado -impltomg_flag
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS: read_platform_lib C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/global.setting.tcl
 Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/common.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/APCoreGen.gen 
 Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/op.gen 
 Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/op_simcore.gen 
 Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/interface.gen 
-Execute     source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/global.setting.tcl 
 Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
@@ -499,71 +517,173 @@ Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/util
 Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
 Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
-Command     ap_source done; 0.121 sec.
 INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=8.000 (was NA)
+INFO-FLOW: DBG:PUTS:       initCTypeInfo top_module=matrixcalc xml_exists=0
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.tbgen.tcl 
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.tbgen.tcl 
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.tbgen.tcl 
+INFO-FLOW: DBG:PUTS:       cosim_export_main adding deadlock detection to matrixcalc
+INFO-FLOW: DBG:PUTS: Skipping loadAnalyze_DB, #g_database=28
+INFO-FLOW: DBG:PUTS:       generate_json generate_bd_files=0 generate_xo_files=false #modelList=2 #gSsdmPorts=0
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='false' modelList='matrixcalc_mul_4s_4s_4_1_1
+matrixcalc
+' rtl_lang='vlog' bootstrap_tcl='false' outdir='' outfilename=''
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/tps/tcl/tcllib1.11.1/try/try.tcl 
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/top-io-be.tcl 
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.tbgen.tcl 
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.compgen.dataonly.tcl 
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.tbgen.tcl 
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/global.setting.tcl 
 Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute     source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/global.setting.tcl 
-Execute     source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.rtl_wrap.cfg.tcl 
-Execute     source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.tbgen.tcl 
-Execute     source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.tbgen.tcl 
-Execute     source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.tbgen.tcl 
-Execute     source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.tbgen.tcl 
-INFO: [COSIM 212-47] Using XSIM for RTL simulation.
-INFO: [COSIM 212-14] Instrumenting C test bench ...
-Execute     ap_part_info -name xc7z020-clg400-1 -data info 
-INFO-FLOW: TB processing: C:/Users/aulavirtual/Desktop/Trabajo_Final/matrixcalc_test.cpp C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/./sim/autowrap/testbench/matrixcalc_test.cpp_pre.cpp
-Execute     clang_tidy xilinx-tb-process -desc tb-process C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/./sim/autowrap/testbench/matrixcalc_test.cpp_pre.cpp.tb.cpp std=c++14 
-INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-tb-process -fix-errors C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/./sim/autowrap/testbench/matrixcalc_test.cpp_pre.cpp.tb.cpp -- -std=c++14 -fhls -ferror-limit=0
-Command     clang_tidy done; 1.985 sec.
-Execute     ap_part_info -name xc7z020-clg400-1 -data info 
-INFO-FLOW: TB processing: C:/Users/aulavirtual/Desktop/Trabajo_Final/matrixcalc.cpp C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/./sim/autowrap/testbench/matrixcalc.cpp_pre.cpp
-Execute     clang_tidy xilinx-tb-process -desc tb-process C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/./sim/autowrap/testbench/matrixcalc.cpp_pre.cpp.tb.cpp std=c++14 
-INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2023.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-tb-process -fix-errors C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/./sim/autowrap/testbench/matrixcalc.cpp_pre.cpp.tb.cpp -- -std=c++14 -fhls -ferror-limit=0
-Command     clang_tidy done; 1.825 sec.
-Execute     source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/global.setting.tcl 
-Execute     source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.rtl_wrap.cfg.tcl 
-Execute     source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.rtl_wrap.cfg.tcl 
-Execute     source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.rtl_wrap.cfg.tcl 
-Execute     source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.tbgen.tcl 
-Execute     source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.tbgen.tcl 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info 
-Execute     source .run_sim.tcl 
-INFO: [COSIM 212-302] Starting C TB testing ... 
-Command     ap_source done; 6.36 sec.
-INFO: [COSIM 212-333] Generating C post check test bench ...
-INFO: [COSIM 212-12] Generating RTL test bench ...
-Execute     source ../tv/cdatafile/ref.tcl 
-Execute     source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.tbgen.tcl 
-Execute     source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.tbgen.tcl 
-Execute     source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.tbgen.tcl 
-Execute     source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.tbgen.tcl 
-Execute     source ../tv/cdatafile/ref.tcl 
-Execute     source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.tbgen.tcl 
-Execute     source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.tbgen.tcl 
-Execute     source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.tbgen.tcl 
-Execute     source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.tbgen.tcl 
-Execute     source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.tbgen.tcl 
-Execute     source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.tbgen.tcl 
-Execute     source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.tbgen.tcl 
-Execute     source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.tbgen.tcl 
-Execute     source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.tbgen.tcl 
-Execute     source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.tbgen.tcl 
-Execute     source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.tbgen.tcl 
-Execute     source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.DependenceCheck.tcl 
-Execute     source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.tbgen.tcl 
-Execute     source C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.tbgen.tcl 
-INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
-Execute     source .run_sim.tcl 
-Execute       source check_sim.tcl 
-Execute       source dataflow_monitor_API.tcl 
-Execute       source .sim.status.tcl 
-INFO: [COSIM 212-323] Starting verilog simulation. 
-INFO: [COSIM 212-15] Starting XSIM ...
-INFO: [COSIM 212-316] Starting C post checking ...
-Command     ap_source done; 244.049 sec.
-INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
-Command   cosim_design done; 265.352 sec.
-INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 265.354 seconds; current allocated memory: 10.566 MB.
-Command ap_source done; 266.974 sec.
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.constraint.tcl 
+Execute     sc_get_clocks matrixcalc 
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.tbgen.tcl 
+INFO-FLOW: DBG:PUTS:       cosim_export_main adding deadlock detection to matrixcalc
+INFO-FLOW: DBG:PUTS:       generate_ip_script #gSsdmPorts=0 g_lang=vlog is_sdaccel=false is_sdsoc=true xo_file=
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.tbgen.tcl 
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.tbgen.tcl 
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.tbgen.tcl 
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS:       generate_top_info
+INFO-FLOW: DBG:PUTS:       prepArgInfo -> loadAnalyze_DB top_module=matrixcalc
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.tbgen.tcl 
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.tbgen.tcl 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.tbgen.tcl 
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.constraint.tcl 
+INFO-FLOW: DBG:PUTS:       generate_syn_sh
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS:       generate_imp_constraints
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.constraint.tcl 
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.tbgen.tcl 
+INFO-FLOW: DBG:PUTS:       delete-temp-dirs (skipped for debug)
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO-FLOW: DBG:PUTS: read_platform_lib C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/global.setting.tcl
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/common.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/op.gen 
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/interface.gen 
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/global.setting.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:     IP package: exec C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/impl/ip/pack.bat
+INFO-FLOW: DBG:PUTS:     IP package: success C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/impl/ip/pack.bat
+INFO-FLOW: DBG:PUTS:   auto_impl: eval: -flow impl -rtl verilog
+INFO-FLOW: DBG:PROC: ::AESL_AUTOIMPL::auto_impl args='-flow impl -rtl verilog'
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Starting RTL evaluation using Vivado ...
+INFO-FLOW: DBG:PUTS: automg_wrap -rtl vlog -tool Vivado -impltomg_flag
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate args='-rtl vlog -tool Vivado -impltomg_flag'
+INFO-FLOW: DBG:PUTS:     auto_generate -rtl vlog -tool Vivado -impltomg_flag
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS: read_platform_lib C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/global.setting.tcl
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/common.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/op.gen 
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/interface.gen 
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/global.setting.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:       generate_syn_sh
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS:       generate_imp_constraints
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.constraint.tcl 
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.tbgen.tcl 
+INFO-FLOW: DBG:PUTS:       delete-temp-dirs (skipped for debug)
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO-FLOW: DBG:PUTS: read_platform_lib C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/global.setting.tcl
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/common.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/op.gen 
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/generic/autopilot/interface.gen 
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/global.setting.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/util.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2023.1/common/technology/xilinx/DSP48/dsp48.gen 
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/autopilot.rtl.models.tcl 
+Execute     source C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/global.setting.tcl 
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+INFO-FLOW: DBG:PUTS: debug_in_auto_impl: vlog exec C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/impl/verilog/impl.bat
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::auto_impl_report topinfo_dict='RtlTopPrefix {} RtlSubPrefix matrixcalc_ TopModuleNoPrefix matrixcalc TopModuleWithPrefix matrixcalc' export_design_flow='impl' impl_dir='C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/impl' lang='verilog' out_dir=''
+INFO-FLOW: DBG:PUTS:     auto_impl_report: impl processing xml
+Execute     ap_part_info -quiet -data family -name xc7z020-clg400-1 
+INFO-FLOW: DBG:PUTS:     writing export xml file: C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/impl/report/verilog/export_impl.xml
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::auto_impl_report_txt xml_root='domNode0000013419FA4C1C' export_design_flow='impl' export_rpt='C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/impl/report/verilog/export_impl.rpt' rpt_txt_var=''
+INFO-FLOW: DBG:PUTS:     wrote export rpt file: export_impl.rpt
+INFO-FLOW: DBG:PUTS:     auto_impl_report: syn processing xml
+Execute     ap_part_info -quiet -data family -name xc7z020-clg400-1 
+INFO-FLOW: DBG:PUTS:     writing export xml file: C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/impl/report/verilog/export_syn.xml
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::auto_impl_report_txt xml_root='domNode0000013419FCBDBC' export_design_flow='syn' export_rpt='C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/impl/report/verilog/export_syn.rpt' rpt_txt_var=''
+INFO-FLOW: DBG:PUTS:     wrote export rpt file: export_syn.rpt
+Execute     send_msg_by_id INFO @200-802@%s Proyecto_Final/minima_latencia/impl/export.zip 
+INFO: [HLS 200-802] Generated output file Proyecto_Final/minima_latencia/impl/export.zip
+Command   export_design done; 173.964 sec.
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 173.964 seconds; current allocated memory: 8.332 MB.
+Command ap_source done; 176.526 sec.
 Execute cleanup_all 

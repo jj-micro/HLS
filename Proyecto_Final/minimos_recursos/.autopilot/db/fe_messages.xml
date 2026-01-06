@@ -1,0 +1,60 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/javie/Desktop/HLS/Proyecto_Final/minimos_recursos/directives.tcl:16:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="det" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/javie/Desktop/HLS/Proyecto_Final/minimos_recursos/directives.tcl:7:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="det" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/javie/Desktop/HLS/Proyecto_Final/minimos_recursos/directives.tcl:8:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="det" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/javie/Desktop/HLS/Proyecto_Final/minimos_recursos/directives.tcl:18:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="matrixmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/javie/Desktop/HLS/Proyecto_Final/minimos_recursos/directives.tcl:17:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="matrixmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/javie/Desktop/HLS/Proyecto_Final/minimos_recursos/directives.tcl:10:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="matrixmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/javie/Desktop/HLS/Proyecto_Final/minimos_recursos/directives.tcl:9:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="matrixmul" ARG_PragmaIsValid="1" ARG_PragmaOptions="factor=1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/javie/Desktop/HLS/Proyecto_Final/minimos_recursos/directives.tcl:14:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="matrixsum" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/javie/Desktop/HLS/Proyecto_Final/minimos_recursos/directives.tcl:13:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="matrixsum" ARG_PragmaIsValid="1" ARG_PragmaOptions="off" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/javie/Desktop/HLS/Proyecto_Final/minimos_recursos/directives.tcl:11:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="matrixcalc" ARG_PragmaIsValid="1" ARG_PragmaOptions="operation instances=add limit=1" ARG_PragmaType="allocation" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/javie/Desktop/HLS/Proyecto_Final/minimos_recursos/directives.tcl:12:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="matrixcalc" ARG_PragmaIsValid="1" ARG_PragmaOptions="operation instances=mul limit=1" ARG_PragmaType="allocation" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/javie/Desktop/HLS/Proyecto_Final/minimos_recursos/directives.tcl:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="matrixcalc" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=matrixcalc" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="C:/Users/javie/Desktop/HLS/Proyecto_Final/minimos_recursos/csynth.tcl:19:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="matrixcalc" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=matrixcalc" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Inlining function 'matrixmul(ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3])' into 'matrixcalc(ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3])'">
+        <args Callee="matrixmul(ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3])" Callee-DebugLoc="File matrixcalc.cpp Line 34 Column 0" Caller="matrixcalc(ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3])" Caller-DebugLoc="File matrixcalc.cpp Line 68 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Inlining function 'matrixsum(ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3])' into 'matrixcalc(ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3])'">
+        <args Callee="matrixsum(ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3])" Callee-DebugLoc="File matrixcalc.cpp Line 53 Column 0" Caller="matrixcalc(ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3])" Caller-DebugLoc="File matrixcalc.cpp Line 68 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Inlining function 'det(ap_int&lt;4&gt; (*) [3])' into 'matrixcalc(ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3])'">
+        <args Callee="det(ap_int&lt;4&gt; (*) [3])" Callee-DebugLoc="File matrixcalc.cpp Line 4 Column 0" Caller="matrixcalc(ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3], ap_int&lt;4&gt; (*) [3])" Caller-DebugLoc="File matrixcalc.cpp Line 68 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Aggregating bram variable 'c' with compact=bit mode in 4-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="4" HwTyName="bram" Name="c"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Aggregating bram variable 'b' with compact=bit mode in 4-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="4" HwTyName="bram" Name="b"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="matrixcalc.cpp:68:0" msg_body="Aggregating bram variable 'a' with compact=bit mode in 4-bits">
+        <args AggregateTypeName="compact=bit" Bitwidth="4" HwTyName="bram" Name="a"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

@@ -1,6 +1,6 @@
 <dict>
   <key>main-file</key>
-  <string>C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/.autopilot/db/matrixcalc.pp.0.cpp</string>
+  <string>C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/.autopilot/db/matrixcalc.pp.0.cpp</string>
   <key>diagnostics</key>
   <array>
     <dict>
@@ -55,9 +55,25 @@
       <key>level</key>
       <string>warning</string>
       <key>filename</key>
-      <string>C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/csynth.tcl</string>
+      <string>C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/csynth.tcl</string>
       <key>line</key>
-      <integer>18</integer>
+      <integer>19</integer>
+      <key>column</key>
+      <integer>9</integer>
+      <key>message</key>
+      <string>HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=matrixcalc_XLX_SEP_ PragmaOptions=name=matrixcalc_XLX_SEP_</string>
+      <key>ID</key>
+      <integer>5471</integer>
+      <key>WarningOption</key>
+      <string>dump-hls-pragmas</string>
+    </dict>
+    <dict>
+      <key>level</key>
+      <string>warning</string>
+      <key>filename</key>
+      <string>C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/directives.tcl</string>
+      <key>line</key>
+      <integer>7</integer>
       <key>column</key>
       <integer>9</integer>
       <key>message</key>

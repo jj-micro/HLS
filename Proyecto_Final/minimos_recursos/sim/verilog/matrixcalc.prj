@@ -1,0 +1,10 @@
+sv work "glbl.v"
+sv xil_defaultlib "AESL_automem_a.v"
+sv xil_defaultlib "AESL_automem_b.v"
+sv xil_defaultlib "AESL_automem_c.v"
+sv xil_defaultlib "matrixcalc.autotb.v"
+sv xil_defaultlib "matrixcalc.v"
+sv xil_defaultlib "matrixcalc_aux_RAM_AUTO_1R1W.v"
+sv xil_defaultlib "matrixcalc_mul_4s_4s_4_1_1.v"
+sv xil_defaultlib "dataflow_monitor.sv"
+

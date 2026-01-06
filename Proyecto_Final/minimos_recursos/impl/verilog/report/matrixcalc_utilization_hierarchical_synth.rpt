@@ -1,0 +1,34 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+| Date         : Tue Jan  6 12:13:44 2026
+| Host         : JJ-PC running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -hierarchical_depth 5 -file ./report/matrixcalc_utilization_hierarchical_synth.rpt
+| Design       : bd_0_wrapper
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++----------------+------------------------------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+|    Instance    |                     Module                     | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP Blocks |
++----------------+------------------------------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+| bd_0_wrapper   |                                          (top) |        170 |        162 |       8 |    0 | 110 |      0 |      0 |          0 |
+|   bd_0_i       |                                           bd_0 |        170 |        162 |       8 |    0 | 110 |      0 |      0 |          0 |
+|     hls_inst   |                                bd_0_hls_inst_0 |        170 |        162 |       8 |    0 | 110 |      0 |      0 |          0 |
+|       inst     |                     bd_0_hls_inst_0_matrixcalc |        170 |        162 |       8 |    0 | 110 |      0 |      0 |          0 |
+|         (inst) |                     bd_0_hls_inst_0_matrixcalc |         38 |         38 |       0 |    0 | 102 |      0 |      0 |          0 |
+|         aux2_U |   bd_0_hls_inst_0_matrixcalc_aux_RAM_AUTO_1R1W |         80 |         76 |       4 |    0 |   4 |      0 |      0 |          0 |
+|         aux_U  | bd_0_hls_inst_0_matrixcalc_aux_RAM_AUTO_1R1W_0 |         52 |         48 |       4 |    0 |   4 |      0 |      0 |          0 |
++----------------+------------------------------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+
+

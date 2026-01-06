@@ -16,8 +16,29 @@
       ]
     },
     "slx": false,
-    "sourceFile": "C:/Users/aulavirtual/Desktop/Trabajo_Final/Proyecto_Final/prueba_1/csynth.tcl",
-    "sourceLine": 18,
+    "sourceFile": "C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/directives.tcl",
+    "sourceLine": 7,
+    "success": true
+  },
+  {
+    "functionLabel": "",
+    "functionName": "matrixcalc",
+    "id": 1,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "matrixcalc"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "C:/Users/javie/Desktop/HLS/Proyecto_Final/minima_latencia/csynth.tcl",
+    "sourceLine": 19,
     "success": true
   }
 ]

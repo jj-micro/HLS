@@ -55,7 +55,7 @@ set XDCFiles {}
 set ExtraGlobalOptions {"area_timing" 1 "clock_gate" 1 "impl_flow" map "power_gate" 0}
 set TBTVFileNotFound {}
 set AppFile ../hls.app
-set ApsFile prueba_1.aps
+set ApsFile minima_latencia.aps
 set AvePath ../../.
 set DefaultPlatform DefaultPlatform
 set multiClockList {}

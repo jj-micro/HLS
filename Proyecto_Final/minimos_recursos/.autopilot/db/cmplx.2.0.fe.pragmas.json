@@ -1,0 +1,53 @@
+{
+  "0": {
+    "basicblocks": 5,
+    "calls": "2 3 1",
+    "file": "matrixcalc.cpp",
+    "fileloc": 64,
+    "instructions": 23,
+    "name": "matrixcalc",
+    "total_instructions": 176
+  },
+  "1": {
+    "basicblocks": 8,
+    "calls": "",
+    "file": "matrixcalc.cpp",
+    "fileloc": 3,
+    "instructions": 72,
+    "loads": {
+      "L": 2
+    },
+    "name": "det",
+    "total_instructions": 72
+  },
+  "2": {
+    "basicblocks": 9,
+    "calls": "",
+    "file": "matrixcalc.cpp",
+    "fileloc": 30,
+    "instructions": 49,
+    "loads": {
+      "L": 3
+    },
+    "name": "matrixmul",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 49
+  },
+  "3": {
+    "basicblocks": 7,
+    "calls": "",
+    "file": "matrixcalc.cpp",
+    "fileloc": 49,
+    "instructions": 32,
+    "loads": {
+      "L": 2
+    },
+    "name": "matrixsum",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 32
+  }
+}
